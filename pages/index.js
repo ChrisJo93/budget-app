@@ -10,8 +10,10 @@ export default function Home() {
       <Head>
         <title>Budgetier</title>
         <link rel="icon" href="/favicon.ico" />
-        <Nav />
       </Head>
+      <header className={styles.header}>
+        <Nav />
+      </header>
 
       <main className={styles.main}>
         <h1>
