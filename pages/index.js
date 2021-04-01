@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
+import Count from 'components/count/count';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <Count />
       </Head>
 
       <main className={styles.main}>
