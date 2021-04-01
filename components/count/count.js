@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
 class Count extends Component {
+  state = {
+    currentBudget: 0,
+  };
   render() {
-    return <div>'hey</div>;
+    return <>{this.state.currentBudget}</>;
   }
 }
 
