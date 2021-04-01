@@ -134,3 +134,7 @@
   overflow-y: auto;
   text-align: justify;
 }
+
+.monthlyBudget {
+  border-top: 1px solid grey;
+}

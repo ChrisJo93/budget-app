@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Count from 'components/count/count';
+import Remaining from 'components/remainingbudget/remainingbudget';
 
 export default function Home() {
   return (
@@ -12,9 +12,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          $<Count />
+        <h1>
+          <Remaining />
         </h1>
+
+        <h3 className={styles.monthlyBudget}>Total Budget for(month): $</h3>
         <div className={styles.recentTransactions}>
           Transaction table exists here
         </div>
