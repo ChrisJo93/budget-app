@@ -15,6 +15,9 @@ const Nav = () => {
         <Link href="/views/budgetView">
           <a>Budget</a>
         </Link>
+        <Link href="/">
+          <a>Logout</a>
+        </Link>
       </header>
     </div>
   );
