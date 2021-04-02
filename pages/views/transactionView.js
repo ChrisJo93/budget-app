@@ -1,12 +1,11 @@
 import Link from 'next/link';
+import Nav from 'components/nav/nav';
 
-export default function Transactions() {
+export default function TransactionView() {
   return (
     <div>
+      <Nav />
       <p>I guess I do something</p>
-      <Link href="/">
-        <a>Back</a>
-      </Link>
     </div>
   );
 }

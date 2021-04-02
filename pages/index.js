@@ -11,9 +11,8 @@ export default function Home() {
         <title>Budgetier</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={styles.header}>
-        <Nav />
-      </header>
+
+      <Nav />
 
       <main className={styles.main}>
         <h1>
