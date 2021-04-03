@@ -143,8 +143,8 @@
 }
 
 .navContainer a:hover {
-  text-shadow: 0.5px 2px hsl(313deg 62% 28%);
-  transform: scale(1.1) translate(0px, -4px);
+  text-shadow: 0.5px 1px hsl(313deg 62% 8%);
+  transform: scale(1.05) translate(0px, -1px);
 }
 .navHeader {
   width: 100%;
