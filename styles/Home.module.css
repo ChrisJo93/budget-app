@@ -141,6 +141,10 @@
   width: 100%;
   border-radius: 10px;
 }
+
+.navContainer a:hover {
+  text-shadow: 0.5px 2px hsl(313deg 62% 28%);
+}
 .navHeader {
   width: 100%;
 }
@@ -156,6 +160,7 @@
   align-content: center;
   padding: 10px;
 }
+
 .navLinks a {
   padding: 15px 10px 10px;
 }

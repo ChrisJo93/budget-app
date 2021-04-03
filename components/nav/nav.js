@@ -6,7 +6,16 @@ const Nav = () => {
     <header className={styles.navHeader}>
       <div className={styles.navContainer}>
         <div className={styles.navTitle}>
-          <h2>Budgetier</h2>
+          <h2>
+            {' '}
+            <a
+              href="https://github.com/ChrisJo93"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Budgetier
+            </a>
+          </h2>
         </div>
 
         <div className={styles.navLinks}>
