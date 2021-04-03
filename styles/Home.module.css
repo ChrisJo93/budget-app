@@ -138,12 +138,13 @@
   align-content: space-between;
   background-color: hsl(133deg 62% 38%);
   color: hsl(133deg 62% 98%);
-  width: 100%;
-  border-radius: 10px;
+  box-shadow: 3px 4px 14px 0px hsl(133deg 62% 10%);
+  margin: -10px;
 }
 
 .navContainer a:hover {
   text-shadow: 0.5px 2px hsl(313deg 62% 28%);
+  transform: scale(1.1) translate(0px, -4px);
 }
 .navHeader {
   width: 100%;
@@ -172,4 +173,5 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin: 10px;
 }
