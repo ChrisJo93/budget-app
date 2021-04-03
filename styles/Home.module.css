@@ -142,10 +142,16 @@
   margin: -10px;
 }
 
+.navContainer a:active {
+  transition: 1s;
+  transform: scale(0.5) !important;
+}
+
 .navContainer a:hover {
   text-shadow: 0.5px 1px hsl(313deg 62% 8%);
   transform: scale(1.05) translate(0px, -1px);
 }
+
 .navHeader {
   width: 100%;
 }
