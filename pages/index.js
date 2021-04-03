@@ -6,7 +6,7 @@ import Nav from 'components/nav/nav';
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>Budgetier</title>
         <link rel="icon" href="/favicon.ico" />

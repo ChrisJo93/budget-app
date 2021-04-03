@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import Nav from 'components/nav/nav';
+import styles from 'styles/Home.module.css';
 
 export default function BudgetView() {
   return (
-    <div>
+    <div className={styles.container}>
       <Nav />
       <p>Where Budget Goes.</p>
       <ul>

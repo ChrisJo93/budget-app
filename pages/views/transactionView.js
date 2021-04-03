@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import Nav from 'components/nav/nav';
 import axios from 'axios';
+import styles from 'styles/Home.module.css';
 
 export default function TransactionView() {
   const apiCall = () => {
@@ -14,7 +14,7 @@ export default function TransactionView() {
       });
   };
   return (
-    <div>
+    <div className={styles.container}>
       <Nav />
       <button onClick={apiCall}>Click me</button>
       <ul>
