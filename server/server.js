@@ -11,8 +11,9 @@ app.prepare().then(() => {
 
   server.use(bodyParser.json());
 
-  server.get('/', (req, res) => {
-    console.log('you made it');
+  server.get('/add', (req, res) => {
+    console.log(req.body);
+    console.log('a change another changed');
   });
   // server.post('/request/custom', custom);
 
