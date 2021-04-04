@@ -5,6 +5,14 @@ class RemainingBudget extends Component {
     currentBudget: 0,
   };
 
+  add = (e, item) => {
+    this.state.currentBudget += item;
+  };
+
+  subtract = (e, item) => {
+    this.state.currentBudget -= item;
+  };
+
   render() {
     return <div>Left to Spend: ${this.state.currentBudget}</div>;
   }
