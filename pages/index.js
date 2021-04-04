@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 import Remaining from 'components/budget/remainingbudget';
 import Monthly from 'components/budget/monthlybudget';
 import Nav from 'components/nav/nav';
+import Footer from 'components/footer/footer';
 
 export default function Home() {
   return (
@@ -27,16 +28,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://github.com/ChrisJo93"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Budgetier{' '}
-          <img src="/logo.svg" alt="Budgeter Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }

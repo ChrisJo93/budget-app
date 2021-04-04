@@ -116,8 +116,7 @@
 }
 
 .navContainer a:active {
-  transition: 1s;
-  transform: scale(0.5) !important;
+  transform: scale(1.03) !important;
 }
 
 .navContainer a:hover {
@@ -152,4 +151,5 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
+  min-height: 100vh;
 }
