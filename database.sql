@@ -1,0 +1,2 @@
+-- Database needs a user, budget goals, months, transaction categories, and a few more things... still brainstorming.
+-- lol this is why we build backend up when making an app. Just got a little carried away with this one.
