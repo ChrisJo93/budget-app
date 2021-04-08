@@ -27,12 +27,19 @@ app.prepare().then(() => {
   function generateRandomNumber() {
     return Math.floor(Math.random() * 2);
   }
-  let x = generateRandomNumber();
 
-  let customSound;
+  function randomSound(x) {
+    switch (x) {
+      case 1:
+        return './server/deetdoot.wav';
+      case 2:
+        return './server/auir.mp3';
+    }
+  }
+
   server.listen(3000, (err) => {
     if (err) throw err;
-    sound.play(`./server/deetdoot.wav`);
+    sound.play(randomSound(generateRandomNumber()));
     console.log(`Joh'gaav?`);
   });
 });
