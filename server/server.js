@@ -31,7 +31,7 @@ app.prepare().then(() => {
 const sound = require('sound-play');
 
 function generateRandomNumber() {
-  return Math.floor(Math.random() * 2 + 1);
+  return Math.floor(Math.random() * 2);
 }
 
 function randomSound(x) {

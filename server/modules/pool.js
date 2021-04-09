@@ -1,5 +1,4 @@
 const pg = require('pg');
-const sound = require('sound-play');
 
 let config = {};
 
@@ -14,7 +13,6 @@ config = {
 const pool = new pg.Pool(config);
 
 pool.on('connect', () => {
-  sound.play('../public/auir.mp3');
   console.log(`My life for Auir`);
 });
 
