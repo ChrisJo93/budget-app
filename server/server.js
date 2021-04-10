@@ -15,6 +15,10 @@ app.prepare().then(() => {
   server.use(bodyParser.json());
   server.use(bodyParser.urlencoded({ extended: true }));
 
+  //Routes
+  server.use('/month', months);
+  server.use('/total', total);
+
   server.get('*', (req, res) => {
     return handle(req, res);
   });
@@ -24,10 +28,6 @@ app.prepare().then(() => {
     // sound.play(randomSound(generateRandomNumber()));
     console.log(`Joh'gaav?`);
   });
-
-  //Routes
-  server.use('/month', months);
-  server.use('/total', total);
 });
 
 // Nerd middleware
