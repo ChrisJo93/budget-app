@@ -1,6 +1,7 @@
 {
   "name": "budget-app",
   "version": "0.1.0",
+  "proxy": "http://localhost:3000",
   "private": true,
   "scripts": {
     "dev": "nodemon -w server/server.js server/server.js",

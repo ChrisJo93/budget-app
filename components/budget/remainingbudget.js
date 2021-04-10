@@ -6,19 +6,11 @@ class RemainingBudget extends Component {
   //Monthly budget file is no longer needed if this component can handle calculations AND displaying budget concerns.
   //maybe calculations would best be handled in the server?
   state = {
-    currentBudget: 0,
-  };
-
-  add = (e, item) => {
-    this.state.currentBudget += item;
-  };
-
-  subtract = (e, item) => {
-    this.state.currentBudget -= item;
+    remainder: 0,
   };
 
   render() {
-    return <div>Left to Spend: ${this.state.currentBudget}</div>;
+    return <div>Left to Spend: ${this.state.remainder}</div>;
   }
 }
 
