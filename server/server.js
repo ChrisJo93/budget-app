@@ -6,15 +6,16 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+// Route Includes
+const months = require('./month.router');
+
 app.prepare().then(() => {
   const server = express();
-
   server.use(bodyParser.json());
 
   server.get('/add', (req, res) => {
     console.log(req.body);
   });
-  // server.post('/request/custom', custom); to be determined
 
   server.get('*', (req, res) => {
     return handle(req, res);
@@ -25,6 +26,9 @@ app.prepare().then(() => {
     sound.play(randomSound(generateRandomNumber()));
     console.log(`Joh'gaav?`);
   });
+
+  //Routes
+  server.use('/month', months);
 });
 
 // Nerd middleware

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class MonthlyBudget extends Component {
   state = {
-    monthlybudget: 0,
+    monthlybudget: 300,
   };
 
   render() {
