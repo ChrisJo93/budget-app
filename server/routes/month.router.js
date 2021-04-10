@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   console.log('made it');
-  const query = `SELECT * FROM "month"`;
+  const query = `SELECT * FROM "month";`;
   pool
     .query(query)
     .then((result) => {
