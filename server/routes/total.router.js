@@ -3,15 +3,14 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  console.log('made it');
-  const query = `SELECT * FROM "month"`;
+  const query = `SELECT * FROM "user_total_budget"`;
   pool
     .query(query)
     .then((result) => {
       res.send(result.rows);
     })
     .catch((err) => {
-      console.log('error retrieving months', err);
+      console.log('error retrieving total', err);
       res.sendStatus(500);
     });
 });

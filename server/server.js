@@ -8,6 +8,7 @@ const handle = app.getRequestHandler();
 
 // Route Includes
 const months = require('./routes/month.router');
+const total = require('./routes/total.router');
 
 app.prepare().then(() => {
   const server = express();
@@ -20,12 +21,13 @@ app.prepare().then(() => {
 
   server.listen(3000, (err) => {
     if (err) throw err;
-    sound.play(randomSound(generateRandomNumber()));
+    // sound.play(randomSound(generateRandomNumber()));
     console.log(`Joh'gaav?`);
   });
 
   //Routes
   server.use('/month', months);
+  server.use('/total', total);
 });
 
 // Nerd middleware
@@ -39,10 +41,10 @@ function randomSound(x) {
   console.log(x);
   switch (x) {
     case 1:
-      return './server/deetdoot.wav';
+      return './server/sounds/deetdoot.wav';
     case 2:
-      return './server/instruction.wav';
+      return './server/sounds/instruction.wav';
     default:
-      return './server/deetdoot.wav';
+      return './server/sounds/deetdoot.wav';
   }
 }

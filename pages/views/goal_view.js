@@ -1,13 +1,15 @@
-import Footer from 'components/footer/footer';
 import Nav from 'components/nav/nav';
 import styles from 'styles/Home.module.css';
+import Footer from 'components/footer/footer';
+
+import Remaining from 'components/budget/remainingbudget';
 
 export default function BudgetView() {
   return (
     <div className={styles.container}>
       <Nav />
       <main className={styles.main}>
-        <p>Where Budget Goes.</p>
+        <Remaining />
         <ul>
           <li>Monthly Budget established here.</li>
           <li>Weekly Budget set here</li>
