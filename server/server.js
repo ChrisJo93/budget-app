@@ -7,19 +7,16 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 // Route Includes
-const months = require('./month.router');
+const months = require('./routes/month.router');
 
 app.prepare().then(() => {
   const server = express();
   server.use(bodyParser.json());
+  server.use(bodyParser.urlencoded({ extended: true }));
 
-  server.get('/add', (req, res) => {
-    console.log(req.body);
-  });
-
-  server.get('*', (req, res) => {
-    return handle(req, res);
-  });
+  // server.get('*', (req, res) => {
+  //   return handle(req, res);
+  // });
 
   server.listen(3000, (err) => {
     if (err) throw err;
