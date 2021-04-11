@@ -12,8 +12,8 @@ class RemainingBudget extends Component {
     axios
       .get('/total')
       .then((response) => {
-        console.log(response.data);
-        this.handleState(response.data[0].total_amount);
+        console.log(response.data[0]);
+        this.handleState(response.data[0].monthly_total);
       })
       .catch((error) => {
         console.log(error);
