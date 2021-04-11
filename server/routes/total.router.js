@@ -3,7 +3,7 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  const query = `SELECT * FROM "user_total_budget";`;
+  const query = `SELECT SUM(amount) as monthly_total FROM "user_budget_goal" WHERE "month_id" = 2;`;
   pool
     .query(query)
     .then((result) => {
