@@ -20,8 +20,8 @@ class RemainingBudget extends Component {
       });
   }
 
-  handleState = (x) => {
-    this.setState({ remainder: x });
+  handleState = (response) => {
+    this.setState({ remainder: response });
   };
 
   render() {

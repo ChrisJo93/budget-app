@@ -8,6 +8,7 @@ export default function BudgetView() {
   return (
     <div className={styles.container}>
       <Nav />
+
       <main className={styles.main}>
         <Remaining />
         <ul>
