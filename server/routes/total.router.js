@@ -16,3 +16,14 @@ router.get('/', (req, res) => {
 });
 
 module.exports = router;
+
+// Query to return month's sum total with specifier
+// SELECT
+// "month".month_name,
+// SUM(amount) as total
+// FROM
+// "user_budget_goal"
+// INNER JOIN "month" ON "user_budget_goal".month_id = "month".id
+// WHERE "month".month_name = 'February'
+// GROUP BY
+// "month".month_name;
