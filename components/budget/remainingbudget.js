@@ -25,7 +25,7 @@ class RemainingBudget extends Component {
   };
 
   render() {
-    return <div>Left to Spend: ${this.state.remainder}</div>;
+    return <div> Remaining budget for ${this.state.remainder}</div>;
   }
 }
 

@@ -7,8 +7,7 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 // Route Includes
-const months = require('./routes/month.router');
-const total = require('./routes/total.router');
+const month = require('./routes/month.router');
 
 app.prepare().then(() => {
   const server = express();
@@ -16,8 +15,7 @@ app.prepare().then(() => {
   server.use(bodyParser.urlencoded({ extended: true }));
 
   //Routes
-  server.use('/month', months);
-  server.use('/total', total);
+  server.use('/month', month);
 
   server.get('*', (req, res) => {
     return handle(req, res);
