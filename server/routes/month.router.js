@@ -40,4 +40,6 @@ router.get('/total', (req, res) => {
 // GROUP BY
 // "month".month_name;
 
+//spiking state management and cloud storage
+
 module.exports = router;
