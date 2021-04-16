@@ -15,7 +15,7 @@ const reducer = (state = initialState, action) => {
     case actionTypes.FAILURE:
       return { ...state, ...{ error: action.error } };
 
-    case actionTypes.MONTH:
+    case actionTypes.SET_MONTH:
       return { ...state, ...action.payload };
 
     case actionTypes.MONTH_TOTAL:
