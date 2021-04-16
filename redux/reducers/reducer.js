@@ -17,6 +17,9 @@ const reducer = (state = initialState, action) => {
 
     case actionTypes.MONTH:
       return { ...state, ...action.payload };
+
+    case actionTypes.MONTH_TOTAL:
+      return { ...state, ...action.payload };
   }
 };
 
