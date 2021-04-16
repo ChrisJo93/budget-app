@@ -1,7 +1,13 @@
-import { actionTypes } from './actions';
+import { actionTypes } from '../actions';
 import { HYDRATE } from 'next-redux-wrapper';
 
-const reducer = (state = [], action) => {
+const initialState = {
+  month: [],
+  error: null,
+  total: 0,
+};
+
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case HYDRATE: {
       return { ...state, ...action.payload };
