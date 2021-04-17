@@ -8,21 +8,9 @@ class RemainingBudget extends Component {
   //maybe calculations would best be handled in the server?
   state = {};
 
-  componentDidMount() {
-    axios
-      .get('/total')
-      .then((response) => {
-        console.log(response.data[0]);
-        this.handleState(response.data[0].monthly_total);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
-  handleState = (response) => {
-    this.setState({ remainder: response });
-  };
+  // handleState = (response) => {
+  //   this.setState({ remainder: response });
+  // };
 
   render() {
     return <div> Remaining budget for ${this.state.remainder}</div>;

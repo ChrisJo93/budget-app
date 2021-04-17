@@ -3,8 +3,6 @@ import { HYDRATE } from 'next-redux-wrapper';
 
 const initialState = {
   month: [],
-  error: null,
-  total: 0,
 };
 
 const reducer = (state = initialState, action) => {
@@ -17,9 +15,8 @@ const reducer = (state = initialState, action) => {
 
     case actionTypes.SET_MONTH:
       return { ...state, ...action.payload };
-
-    case actionTypes.MONTH_TOTAL:
-      return { ...state, ...action.payload };
+    default:
+      return state;
   }
 };
 
