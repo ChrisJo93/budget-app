@@ -10,15 +10,4 @@ const Test = () => {
   return <button onClick={() => dispatch(month())}>something</button>;
 };
 
-export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
-  store.dispatch(tickClock(false));
-
-  if (!store.getState().placeholderData) {
-    store.dispatch(month());
-    store.dispatch(END);
-  }
-
-  await store.sagaTask.toPromise();
-});
-
 export default Test;

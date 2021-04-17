@@ -5,6 +5,7 @@ import Monthly from 'components/budget/monthlybudget';
 import Nav from 'components/nav/nav';
 import Footer from 'components/footer/footer';
 import Test from 'test';
+import Test2 from 'test2';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Nav />
 
       <Test />
+      <Test2 />
 
       <main className={styles.main}>
         <h1>
