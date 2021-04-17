@@ -1,3 +1,5 @@
+// sets relative imports for all files in directory
+
 {
   "compilerOptions": {
     "baseUrl": "."
