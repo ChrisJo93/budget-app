@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Test2 extends Component {
+  componentDidMount() {
+    console.log(this.props.dispatch(month()));
+  }
   render() {
     return <button>ayo baby</button>;
   }
@@ -17,4 +20,4 @@ class Test2 extends Component {
 //   await store.sagaTask.toPromise();
 // });
 
-export default Test2;
+export default connect((state) => state)(Test2);
