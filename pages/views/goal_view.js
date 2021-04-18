@@ -5,7 +5,6 @@ import Footer from 'components/footer';
 import { connect } from 'react-redux';
 import { month } from 'redux/actions';
 
-import Remaining from 'components/budget/remainingbudget';
 import MonthDisplay from 'components/month.total';
 
 class BudgetView extends Component {
@@ -26,15 +25,8 @@ class BudgetView extends Component {
       <div className={styles.container}>
         <Nav />
 
-        <main className={styles.main}>
-          <Remaining />
-          {monthList}
-          <ul>
-            <li>Monthly Budget established here.</li>
-            <li>Weekly Budget set here</li>
-            <li>Goals</li>
-            <li>Graph displaying spending trends.</li>
-          </ul>
+        <main className={styles.month_display_container}>
+          <div className={styles.monthDisplay}>{monthList}</div>
         </main>
         <Footer />
       </div>

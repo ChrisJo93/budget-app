@@ -153,3 +153,20 @@
   margin: 10px;
   min-height: 100vh;
 }
+
+/* Styles for month display */
+
+.month_display {
+}
+
+.month_display_container {
+  border: solid black 1px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
