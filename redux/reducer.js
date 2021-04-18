@@ -15,7 +15,7 @@ const reducer = (state = initialState, action) => {
       return { ...state, ...{ error: action.error } };
 
     case actionTypes.SET_MONTH:
-      return { ...state, ...action.payload };
+      return { ...state, month: action.payload };
     default:
       return state;
   }

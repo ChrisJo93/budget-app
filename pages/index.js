@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Remaining from 'components/budget/remainingbudget';
-import Monthly from 'components/budget/monthlybudget';
 import Nav from 'components/nav';
 import Footer from 'components/footer';
 import Test2 from 'class.dispatch';
@@ -22,9 +21,7 @@ export default function Home() {
           <Remaining />
         </h1>
 
-        <h3 className={styles.monthlyBudget}>
-          <Monthly />
-        </h3>
+        <h3 className={styles.monthlyBudget}></h3>
         <div className={styles.recentTransactions}>
           Transaction table exists here
         </div>
