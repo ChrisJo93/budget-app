@@ -1,6 +1,6 @@
-import Nav from 'components/nav/nav';
+import Nav from 'components/nav';
 import styles from 'styles/Home.module.css';
-import Footer from 'components/footer/footer';
+import Footer from 'components/footer';
 
 export default function TransactionView() {
   return (

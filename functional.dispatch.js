@@ -1,8 +1,6 @@
-import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { END } from 'redux-saga';
-import { wrapper } from 'redux/store';
 import { month } from './redux/actions';
+import { connect } from 'react-redux';
 
 const Test = () => {
   const dispatch = useDispatch();
@@ -10,4 +8,4 @@ const Test = () => {
   return <button onClick={() => dispatch(month())}>something</button>;
 };
 
-export default Test;
+export default connect((state) => state)(Test);

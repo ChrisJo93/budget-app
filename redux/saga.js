@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
-import { actionTypes } from '../actions';
+import { actionTypes } from './actions';
+import { all } from 'redux-saga/effects';
 
 function* getMonth() {
   try {
@@ -16,4 +17,6 @@ function* monthSaga() {
   yield takeLatest(actionTypes.GET_MONTH, getMonth);
 }
 
-export default monthSaga;
+export default function* rootSaga() {
+  yield all([monthSaga()]);
+}

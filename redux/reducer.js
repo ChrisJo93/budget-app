@@ -1,5 +1,6 @@
-import { actionTypes } from '../actions';
+import { actionTypes } from './actions';
 import { HYDRATE } from 'next-redux-wrapper';
+import { combineReducers } from 'redux';
 
 const initialState = {
   month: [],
@@ -20,4 +21,6 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default combineReducers({
+  reducer,
+});
