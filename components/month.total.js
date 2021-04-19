@@ -2,9 +2,11 @@ import styles from 'styles/Home.module.css';
 
 const MonthDisplay = (props) => {
   return (
-    <button onClick={() => console.log(props)} className={styles.month_button}>
-      I should bring back months
-    </button>
+    <div>
+      <p onClick={() => console.log(props)}>
+        {props.month.month_name}: {props.month.id}
+      </p>
+    </div>
   );
 };
 

@@ -2,8 +2,8 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
+//fetches all months for form list
 router.get('/', (req, res) => {
-  console.log('made it');
   const query = `SELECT * FROM "month";`;
   pool
     .query(query)
@@ -16,6 +16,20 @@ router.get('/', (req, res) => {
     });
 });
 
+//fetches user goals for month display. This will provide month id, category id, and amount associated
+router.get('/amount', (req, res) => {
+  const query = `SELECT * FROM "user_budget_goal";`;
+  pool
+    .query(query)
+    .then((result) => {
+      res.send(result.rows);
+    })
+    .catch((err) => {
+      console.log('error retrieving mount amount', err);
+    });
+});
+
+//fetches total(sum) amount of all categories by month. This works, but it will return the wrong values in a year
 router.get('/total', (req, res) => {
   const query = `SELECT SUM(amount) as monthly_total FROM "user_budget_goal" WHERE "month_id" = 2;`;
   pool

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Remaining from 'components/budget/remainingbudget';
 import Nav from 'components/nav';
 import Footer from 'components/footer';
 import Test2 from 'class.dispatch';
