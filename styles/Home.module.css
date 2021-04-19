@@ -145,10 +145,9 @@
 
 .container {
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: row;
+  /* flex-wrap: wrap;
+  align-items: center; */
   justify-content: center;
   margin: 10px;
   min-height: 100vh;
@@ -156,10 +155,7 @@
 
 /* Styles for month display */
 
-.month_display {
-}
-
-.month_display_container {
+/* .month_display {
   border: solid black 1px;
   display: flex;
   flex: 1;
@@ -167,6 +163,15 @@
   justify-content: center;
   align-items: center;
   width: 500px;
-  height: 500px;
+  height: 50px;
   overflow: hidden;
-}
+} */
+
+/* .month_main {
+  padding: 2rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: auto;
+} */

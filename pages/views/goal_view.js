@@ -24,9 +24,8 @@ class BudgetView extends Component {
     return (
       <div className={styles.container}>
         <Nav />
-
-        <main className={styles.month_display_container}>
-          <div className={styles.monthDisplay}>{monthList}</div>
+        <main className={styles.month_main}>
+          <div className={styles.month_display}>{monthList}</div>
         </main>
         <Footer />
       </div>
