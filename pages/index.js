@@ -16,10 +16,6 @@ export default function Home() {
       <Test2 />
 
       <main className={styles.main}>
-        <h1>
-          <Remaining />
-        </h1>
-
         <h3 className={styles.monthlyBudget}></h3>
         <div className={styles.recentTransactions}>
           Transaction table exists here
