@@ -2,7 +2,6 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Nav from 'components/nav';
 import Footer from 'components/footer';
-import Test2 from 'class.dispatch';
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       </Head>
 
       <Nav />
-      <Test2 />
 
       <main className={styles.main}>
         <h3 className={styles.monthlyBudget}></h3>
