@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class RemainingBudget extends Component {
+class Remaining extends Component {
   //the monthly budget will be imported directly from server
   //therefore, the remaining budget can be calculated client side using inputed data.
   //Monthly budget file is no longer needed if this component can handle calculations AND displaying budget concerns.
@@ -16,4 +16,4 @@ class RemainingBudget extends Component {
   }
 }
 
-export default RemainingBudget;
+export default Remaining;
