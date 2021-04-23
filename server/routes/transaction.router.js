@@ -31,9 +31,9 @@ router.get('/:category', (req, res) => {
 
 router.post('/', (req, res) => {
   const items = req.body;
-  const query = `INSERT INTO "user_transaction" ("item_name", "amount", "date", "category_id","user_id")
+  const query = `INSERT INTO "user_transaction" ("item_name", "amount", "date", "category_id", "user_id")
   VALUES ($1, $2, $3, $4, $5);`;
-  const query2 = `INSERT INTO "user_transaction" ("item_name", "amount", "category_id","user_id")
+  const query2 = `INSERT INTO "user_transaction" ("item_name", "amount", "category_id", "user_id")
   VALUES ($1, $2, $3, $4);`;
 
   const promises = items.map((item) => {
@@ -76,6 +76,46 @@ router.delete('/', (req, res) => {
     .then(() => res.sendStatus(201))
     .catch((err) => {
       console.log(`error deleting transactions`, err);
+    });
+});
+
+router.put('/', (req, res) => {
+  const items = req.body;
+  const query = `UPDATE "user_transaction" SET 
+    item_name = $1,
+    amount = $2,
+    date = $3,
+    category_id = $4
+
+    WHERE id = $5;`;
+
+  //   pool
+  //     .query(query, [
+  //       item.item_name,
+  //       item.amount,
+  //       item.date,
+  //       item.category_id,
+  //       item.id,
+  //     ])
+  //     .then(() => res.sendStatus(201))
+  //     .catch((err) => {
+  //       console.log(`error updating`, err);
+  //     });
+
+  const promises = items.map((item) => {
+    pool.query(query, [
+      item.item_name,
+      item.amount,
+      item.date,
+      item.category_id,
+      item.id,
+    ]);
+  });
+
+  Promise.all(promises)
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+      console.log(`error updating transactions`, err);
     });
 });
 
