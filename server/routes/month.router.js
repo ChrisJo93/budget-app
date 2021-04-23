@@ -31,7 +31,7 @@ router.get('/amount', (req, res) => {
 
 //fetches total(sum) amount of all categories by month. This works, but it will return the wrong values in a year
 router.get('/total', (req, res) => {
-  const query = `SELECT SUM(amount) as monthly_total FROM "user_budget_goal"`;
+  const query = `SELECT SUM(amount) as monthly_total FROM "user_budget_goal";`;
   pool
     .query(query)
     .then((result) => {
