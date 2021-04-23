@@ -39,21 +39,33 @@ router.post('/', (req, res) => {
   const promises = items.map((item) => {
     //if date is present, post with other data.
     if (item.date != null) {
-      pool.query(query, [
-        item.item_name,
-        item.amount,
-        item.date,
-        item.category_id,
-        item.user_id,
-      ]);
+      pool
+        .query(query, [
+          item.item_name,
+          item.amount,
+          item.date,
+          item.category_id,
+          item.user_id,
+        ])
+        .catch((err) => {
+          if (err) {
+            console.log(`mess`, err.detail, err.column, item);
+          }
+        });
     } else {
       //if date not present, post without date key.
-      pool.query(query2, [
-        item.item_name,
-        item.amount,
-        item.category_id,
-        item.user_id,
-      ]);
+      pool
+        .query(query2, [
+          item.item_name,
+          item.amount,
+          item.category_id,
+          item.user_id,
+        ])
+        .catch((err) => {
+          if (err) {
+            console.log(`mess`, err.detail, err.column, item);
+          }
+        });
     }
   });
   Promise.all(promises)
@@ -68,7 +80,11 @@ router.delete('/', (req, res) => {
   const query = `DELETE FROM "user_transaction" WHERE id = $1;`;
 
   const promises = items.map((item) => {
-    pool.query(query, [item.id]);
+    pool.query(query, [item.id]).catch((err) => {
+      if (err) {
+        console.log(`mess`, err.detail, err.column, item);
+      }
+    });
   });
   //can handle multiple delete requests at once.
   //This will be used on the transaction table for the user to prep multiple item deletes at once.
@@ -89,27 +105,20 @@ router.put('/', (req, res) => {
 
     WHERE id = $5;`;
 
-  //   pool
-  //     .query(query, [
-  //       item.item_name,
-  //       item.amount,
-  //       item.date,
-  //       item.category_id,
-  //       item.id,
-  //     ])
-  //     .then(() => res.sendStatus(201))
-  //     .catch((err) => {
-  //       console.log(`error updating`, err);
-  //     });
-
   const promises = items.map((item) => {
-    pool.query(query, [
-      item.item_name,
-      item.amount,
-      item.date,
-      item.category_id,
-      item.id,
-    ]);
+    pool
+      .query(query, [
+        item.item_name,
+        item.amount,
+        item.date,
+        item.category_id,
+        item.id,
+      ])
+      .catch((err) => {
+        if (err) {
+          console.log(`mess`, err.detail, err.column, item);
+        }
+      });
   });
 
   Promise.all(promises)
