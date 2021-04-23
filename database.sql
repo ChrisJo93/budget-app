@@ -48,3 +48,17 @@ CREATE TABLE "user_budget_goal" (
 INSERT INTO "user_budget_goal" 
 ("goal_name" , "user_id" , "month_id" , "category_id" , "amount")
 VALUES ('Owed Bill for take out', '1', '1', '4', '45.00');
+
+CREATE TABLE "user_transaction" (
+"id" SERIAL PRIMARY KEY,
+"item_name" TEXT,
+"amount" NUMERIC, 
+"date" DATE NOT NULL DEFAULT CURRENT_DATE,
+"category_id" INT REFERENCES "transaction_category",
+"user_id" INT REFERENCES "user"
+);
+
+INSERT INTO "user_transaction" ("item_name","amount","category_id","user_id") 
+VALUES ('gas', '23.74', '12', '1'), ('groomers', '105.99', '8', '1')
+
+

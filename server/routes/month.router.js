@@ -31,14 +31,14 @@ router.get('/amount', (req, res) => {
 
 //fetches total(sum) amount of all categories by month. This works, but it will return the wrong values in a year
 router.get('/total', (req, res) => {
-  const query = `SELECT SUM(amount) as monthly_total FROM "user_budget_goal" WHERE "month_id" = 2;`;
+  const query = `SELECT SUM(amount) as monthly_total FROM "user_budget_goal"`;
   pool
     .query(query)
     .then((result) => {
       res.send(result.rows);
     })
     .catch((err) => {
-      console.log('error retrieving total', err);
+      console.log(`error retrieving total`, err);
       res.sendStatus(500);
     });
 });
@@ -54,6 +54,12 @@ router.get('/total', (req, res) => {
 // GROUP BY
 // "month".month_name;
 
-//spiking state management and cloud storage
+/*
+In Progress:
+Get budget set for specific month based on date and month_id
+Post new monthly budget
+Put update monthly budget
+Delete month budget
+*/
 
 module.exports = router;
