@@ -82,6 +82,7 @@ router.delete('/', (req, res) => {
   const promises = items.map((item) => {
     pool.query(query, [item.id]).catch((err) => {
       if (err) {
+        res.sendStatus(500);
         console.log(`mess`, err.detail, err.column, item);
       }
     });
@@ -116,7 +117,7 @@ router.put('/', (req, res) => {
       ])
       .catch((err) => {
         if (err) {
-          console.log(`mess`, err.detail, err.column, item);
+          console.log(`error updating row`, err.detail, err.column, item);
         }
       });
   });
@@ -128,10 +129,4 @@ router.put('/', (req, res) => {
     });
 });
 
-/* 
-In Progress:
-add catch to all promised using: 
-const results = await Promise.all(promises.map(p => p.catch(e => e)));
-const validResults = results.filter(result => !(result instanceof Error));
-*/
 module.exports = router;
