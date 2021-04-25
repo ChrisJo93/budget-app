@@ -26,6 +26,7 @@ router.get('/:category', (req, res) => {
     })
     .catch((err) => {
       console.log(`error retrieving transactions by category`, err);
+      res.sendStatus(500);
     });
 });
 
@@ -72,6 +73,7 @@ router.post('/', (req, res) => {
     .then(() => res.sendStatus(201))
     .catch((err) => {
       console.log(`error sending transactions`, err);
+      res.sendStatus(500);
     });
 });
 
@@ -82,7 +84,6 @@ router.delete('/', (req, res) => {
   const promises = items.map((item) => {
     pool.query(query, [item.id]).catch((err) => {
       if (err) {
-        res.sendStatus(500);
         console.log(`mess`, err.detail, err.column, item);
       }
     });
@@ -93,6 +94,7 @@ router.delete('/', (req, res) => {
     .then(() => res.sendStatus(201))
     .catch((err) => {
       console.log(`error deleting transactions`, err);
+      res.sendStatus(500);
     });
 });
 
@@ -126,6 +128,7 @@ router.put('/', (req, res) => {
     .then(() => res.sendStatus(201))
     .catch((err) => {
       console.log(`error updating transactions`, err);
+      res.sendStatus(500);
     });
 });
 
