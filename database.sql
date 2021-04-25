@@ -10,24 +10,29 @@ INSERT INTO "user" ("username", "password", "phone", "email")
 VALUES ('chrisdev','dev','555-555-555','dev@testmail.com');
 
 
+
 CREATE TABLE "month_list" (
     "id" SERIAL PRIMARY KEY,
     "month_name" character varying(200)
 );
 
-
-INSERT INTO "month" ("month_name") 
+INSERT INTO "month_list" ("month_name") 
 VALUES ('January'), ('February'), ('March'), ('April'), ('May'), ('June'), ('July'), ('August'), ('September'), ('October'), ('November'), ('December');
 
-CREATE TABLE "total_budget" (
-"id" SERIAL PRIMARY KEY,
-"total_amount" NUMERIC,
-"user_id" INT REFERENCES "user" NOT NULL,
-"month_id" INT REFERENCES "month"
+
+
+CREATE TABLE "income" (
+    "id" integer DEFAULT PRIMARY KEY,
+    "income" numeric,
+    "user_id" integer NOT NULL REFERENCES "user"(id),
+    "month_id" integer REFERENCES month_list(id),
+    "post_date" date NOT NULL DEFAULT CURRENT_DATE
 );
 
 INSERT INTO "total_budget" ("total_amount" ,"user_id" ,"month_id")
 VALUES ('1000.00', '1', '1');
+
+
 
 CREATE TABLE "transaction_category" (
 "id" SERIAL PRIMARY KEY,
@@ -37,14 +42,18 @@ CREATE TABLE "transaction_category" (
 INSERT INTO "transaction_category" ("category_name") 
 VALUES ('Automotive'), ('Bills'), ('Entertainment'), ('Food & Dining'), ('Investments'), ('Groceries'), ('Shopping'), ('Pets'), ('Self-Care'), ('Utilities'), ('Transportation'), ('Gas'), ('Savings');
 
-CREATE TABLE month_goal (
-    id integer DEFAULT nextval('user_budget_goal_id_seq') PRIMARY KEY,
-    user_id integer REFERENCES "user"(id),
-    month_id integer REFERENCES month(id),
-    category_id integer REFERENCES transaction_category(id),
-    amount numeric,
-    date date
+
+
+CREATE TABLE "month_goal" (
+    "id" integer DEFAULT nextval('user_budget_goal_id_seq') PRIMARY KEY,
+    "user_id" integer REFERENCES "user"(id),
+    "month_id" integer REFERENCES month(id),
+    "category_id" integer REFERENCES transaction_category(id),
+    "amount" numeric,
+    "date" date
 );
+
+
 
 CREATE TABLE "transaction" (
 "id" SERIAL PRIMARY KEY,
