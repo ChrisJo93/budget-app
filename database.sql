@@ -10,7 +10,7 @@ INSERT INTO "user" ("username", "password", "phone", "email")
 VALUES ('chrisdev','dev','555-555-555','dev@testmail.com');
 
 
-CREATE TABLE "month" (
+CREATE TABLE "month_list" (
     "id" SERIAL PRIMARY KEY,
     "month_name" character varying(200)
 );

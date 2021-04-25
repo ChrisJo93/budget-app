@@ -4,7 +4,7 @@ const router = express.Router();
 
 //fetches all months for form list
 router.get('/', (req, res) => {
-  const query = `SELECT * FROM "month";`;
+  const query = `SELECT * FROM "month_list";`;
   pool
     .query(query)
     .then((result) => {
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 
 //fetches user goals for month display. This will provide month id, category id, and amount associated
 router.get('/month_budget', (req, res) => {
-  const query = `SELECT * FROM "user_budget_goal";`;
+  const query = `SELECT * FROM "month_goal";`;
   pool
     .query(query)
     .then((result) => {
@@ -31,7 +31,7 @@ router.get('/month_budget', (req, res) => {
 
 //fetches total(sum) amount of all categories by month. This works, but it will return the wrong values in a year
 router.get('/month_total', (req, res) => {
-  const query = `SELECT SUM(amount) as monthly_total FROM "user_budget_goal";`;
+  const query = `SELECT SUM(amount) as monthly_total FROM "month_goal";`;
   pool
     .query(query)
     .then((result) => {
