@@ -11,21 +11,22 @@ VALUES ('chrisdev','dev','555-555-555','dev@testmail.com');
 
 
 CREATE TABLE "month" (
-"id" SERIAL PRIMARY KEY,
-"month_name" varchar (200)
+    "id" SERIAL PRIMARY KEY,
+    "month_name" character varying(200)
 );
+
 
 INSERT INTO "month" ("month_name") 
 VALUES ('January'), ('February'), ('March'), ('April'), ('May'), ('June'), ('July'), ('August'), ('September'), ('October'), ('November'), ('December');
 
-CREATE TABLE "user_total_budget" (
+CREATE TABLE "total_budget" (
 "id" SERIAL PRIMARY KEY,
 "total_amount" NUMERIC,
 "user_id" INT REFERENCES "user" NOT NULL,
 "month_id" INT REFERENCES "month"
 );
 
-INSERT INTO "user_total_budget" ("total_amount" ,"user_id" ,"month_id")
+INSERT INTO "total_budget" ("total_amount" ,"user_id" ,"month_id")
 VALUES ('1000.00', '1', '1');
 
 CREATE TABLE "transaction_category" (
@@ -36,20 +37,16 @@ CREATE TABLE "transaction_category" (
 INSERT INTO "transaction_category" ("category_name") 
 VALUES ('Automotive'), ('Bills'), ('Entertainment'), ('Food & Dining'), ('Investments'), ('Groceries'), ('Shopping'), ('Pets'), ('Self-Care'), ('Utilities'), ('Transportation'), ('Gas'), ('Savings');
 
-CREATE TABLE "user_budget_goal" (
-"id" SERIAL PRIMARY KEY,
-"goal_name" text,
-"user_id" INT REFERENCES "user",
-"month_id" INT REFERENCES "month",
-"category_id" INT REFERENCES "transaction_category",
-"amount" NUMERIC 
+CREATE TABLE month_goal (
+    id integer DEFAULT nextval('user_budget_goal_id_seq') PRIMARY KEY,
+    user_id integer REFERENCES "user"(id),
+    month_id integer REFERENCES month(id),
+    category_id integer REFERENCES transaction_category(id),
+    amount numeric,
+    date date
 );
 
-INSERT INTO "user_budget_goal" 
-("goal_name" , "user_id" , "month_id" , "category_id" , "amount")
-VALUES ('Owed Bill for take out', '1', '1', '4', '45.00');
-
-CREATE TABLE "user_transaction" (
+CREATE TABLE "transaction" (
 "id" SERIAL PRIMARY KEY,
 "item_name" TEXT,
 "amount" NUMERIC, 
@@ -58,7 +55,8 @@ CREATE TABLE "user_transaction" (
 "user_id" INT REFERENCES "user"
 );
 
-INSERT INTO "user_transaction" ("item_name","amount","category_id","user_id") 
+INSERT INTO "transaction" ("item_name","amount","category_id","user_id") 
 VALUES ('gas', '23.74', '12', '1'), ('groomers', '105.99', '8', '1')
 
 
+-- To do: Insert new test data for month_goal table

@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 });
 
 //fetches user goals for month display. This will provide month id, category id, and amount associated
-router.get('/amount', (req, res) => {
+router.get('/month_budget', (req, res) => {
   const query = `SELECT * FROM "user_budget_goal";`;
   pool
     .query(query)
@@ -30,7 +30,7 @@ router.get('/amount', (req, res) => {
 });
 
 //fetches total(sum) amount of all categories by month. This works, but it will return the wrong values in a year
-router.get('/total', (req, res) => {
+router.get('/month_total', (req, res) => {
   const query = `SELECT SUM(amount) as monthly_total FROM "user_budget_goal";`;
   pool
     .query(query)
