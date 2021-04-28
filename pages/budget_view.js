@@ -3,7 +3,7 @@ import Nav from 'components/nav';
 import styles from 'styles/Home.module.css';
 import Footer from 'components/footer';
 import { connect } from 'react-redux';
-import { month } from 'redux/actions';
+import { monthList } from 'redux/actions';
 
 import MonthDisplay from 'components/month.total';
 
@@ -13,7 +13,7 @@ class BudgetView extends Component {
   };
 
   componentDidMount() {
-    this.props.dispatch(month());
+    this.props.dispatch(monthList());
   }
 
   render() {

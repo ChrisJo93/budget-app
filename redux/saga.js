@@ -3,19 +3,22 @@ import { put, takeLatest } from 'redux-saga/effects';
 import { actionTypes } from './actions';
 import { all } from 'redux-saga/effects';
 
-function* getMonth() {
+function* getMonthList() {
   try {
-    const response = yield axios.get('/month');
-    yield put({ type: actionTypes.SET_MONTH, payload: response.data });
+    const response = yield axios.get('/month/month_list');
+    yield put({ type: actionTypes.SET_MONTH_LIST, payload: response.data });
   } catch (err) {
-    yield put({ type: actionTypes.FAILURE, payload: 'Problem loading months' });
+    yield put({
+      type: actionTypes.FAILURE,
+      payload: 'Problem loading month list',
+    });
   }
 }
 
-function* getMonthAmount() {
+function* getMonthGoal() {
   try {
-    const response = yield axios.get('/total');
-    yield put({ type: actionTypes.SET_MONTH_AMOUNT, payload: response.data });
+    const response = yield axios.get('/month/month_goal');
+    yield put({ type: actionTypes.SET_MONTH_GOAL, payload: response.data });
   } catch (err) {
     yield put({
       type: actionTypes.FAILURE,
@@ -25,8 +28,8 @@ function* getMonthAmount() {
 }
 
 function* monthSaga() {
-  yield takeLatest(actionTypes.GET_MONTH, getMonth);
-  yield takeLatest(actionTypes.GET_MONTH_AMOUNT, getMonthAmount);
+  yield takeLatest(actionTypes.GET_MONTH_LIST, getMonthList);
+  yield takeLatest(actionTypes.GET_MONTH_GOAL, getMonthGoal);
 }
 
 export default function* rootSaga() {
