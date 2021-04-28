@@ -31,8 +31,12 @@ router.get('/month_goal', (req, res) => {
 });
 
 //fetches total(sum) amount of all categories by month. This works, but it will return the wrong values in a year
-router.get('/:month_goal_total', (req, res) => {
-  const query = `SELECT SUM(amount) as monthly_total FROM "month_goal";`;
+router.get('/:id', (req, res) => {
+  const query = `SELECT SUM(amount) as monthly_total 
+  FROM "month_goal" 
+  JOIN "month_list" 
+  ON "month_goal".month_id = month_list.id
+  WHERE "month_goal".month_id = $1;`;
   pool
     .query(query)
     .then((result) => {
@@ -61,6 +65,6 @@ Get budget set for specific month based on date and month_id
 Post new monthly budget
 Put update monthly budget
 Delete month budget
+Oh boy, I was gone 2 days and forgot what I did lol
 */
-
 module.exports = router;
