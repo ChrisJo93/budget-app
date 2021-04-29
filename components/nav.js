@@ -22,7 +22,7 @@ const Nav = () => {
           <Link href="/">
             <a>Overview</a>
           </Link>
-          <Link href="/budget_view">
+          <Link href="/month_display_view">
             <a>Goals</a>
           </Link>
           <Link href="/expense_view">

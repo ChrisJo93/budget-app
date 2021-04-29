@@ -4,6 +4,7 @@ export const actionTypes = {
   GET_MONTH_GOAL: 'GET_MONTH_GOAL',
   SET_MONTH_GOAL: 'SET_MONTH_GOAL',
   FAILURE: 'FAILURE',
+  ERROR: 'Sorry, maybe the data sent was wrong?',
 };
 
 export function failure(error) {

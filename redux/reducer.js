@@ -3,10 +3,12 @@ import { HYDRATE } from 'next-redux-wrapper';
 import { combineReducers } from 'redux';
 
 const initialState = {
-  month: [],
+  error: null,
+  monthList: [],
+  monthGoal: 'poop',
 };
 
-const reducer = (state = initialState, action) => {
+const monthReducer = (state = initialState, action) => {
   switch (action.type) {
     case HYDRATE: {
       return { ...state, ...action.payload };
@@ -15,12 +17,15 @@ const reducer = (state = initialState, action) => {
       return { ...state, ...{ error: action.error } };
 
     case actionTypes.SET_MONTH_LIST:
-      return { ...state, month: action.payload };
+      return { ...state, monthList: action.payload };
+
+    case actionTypes.SET_MONTH_GOAL:
+      return { ...state, monthGoal: action.payload };
     default:
       return state;
   }
 };
 
 export default combineReducers({
-  reducer,
+  month: monthReducer,
 });
