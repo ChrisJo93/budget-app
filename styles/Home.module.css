@@ -87,6 +87,15 @@
 
 /* Custom Styles */
 
+.test {
+  background-color: #e8edf6;
+  height: 90vh;
+  width: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3vh;
+}
+/* 
 .recentTransactions {
   margin: 4px 4px;
   padding: 4px;
@@ -150,7 +159,7 @@
   justify-content: space-between;
   margin: 10px;
   min-height: 100vh;
-}
+} */
 
 /* Styles for month display */
 

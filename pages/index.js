@@ -11,16 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Nav />
-
-      <main className={styles.main}>
-        <h3 className={styles.monthlyBudget}></h3>
-        <div className={styles.recentTransactions}>
-          Transaction table exists here
-        </div>
+      <main>
+        <div className={styles.test}>Boop</div>
       </main>
-
-      <Footer />
     </div>
   );
 }
