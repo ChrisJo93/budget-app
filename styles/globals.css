@@ -1,25 +1,21 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities
-
-body {
-  @apply bg-red-500 p-12;
-}
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
 }
 
-/* .test {
+.test {
   background-color: #e8edf6;
   height: 90vh;
   width: 90vh;
   margin-left: auto;
   margin-right: auto;
   border-radius: 3vh;
-} */
+}
 
-/* html,
+html,
 body {
   padding: 0;
   margin: 0px;
@@ -28,7 +24,7 @@ body {
   background-color: #99a2c7;
   height: 100%;
   margin: 1rem;
-} */
+}
 
 /* a {
   color: inherit;
