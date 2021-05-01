@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import styles from '../styles/Home.module.css';
 
 const Nav = () => {
   return (
-    <header className={styles.navHeader}>
-      <div className={styles.navContainer}>
-        <div className={styles.navTitle}>
+    <header>
+      <div>
+        <div>
           <h2>
             {' '}
             <a
@@ -18,7 +17,7 @@ const Nav = () => {
           </h2>
         </div>
 
-        <div className={styles.navLinks}>
+        <div>
           <Link href="/">
             <a>Overview</a>
           </Link>

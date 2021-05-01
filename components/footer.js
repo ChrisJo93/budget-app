@@ -1,5 +1,3 @@
-import styles from '../styles/Home.module.css';
-
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -8,8 +6,7 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Budgetier{' '}
-        <img src="/logo.svg" alt="Budgeter Logo" className={styles.logo} />
+        Budgetier <img src="/logo.svg" alt="Budgeter Logo" />
       </a>
     </footer>
   );
