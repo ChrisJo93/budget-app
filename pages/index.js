@@ -9,7 +9,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="test">Boop</div>
+        <div className="container">Boop</div>
       </main>
     </div>
   );
