@@ -22,12 +22,6 @@ const Nav = () => {
           <Link href="/">
             <a>Overview</a>
           </Link>
-          <Link href="/month_display_view">
-            <a>Goals</a>
-          </Link>
-          <Link href="/expense_view">
-            <a>Transactions</a>
-          </Link>
           <Link href="/">
             <a>Logout</a>
           </Link>
