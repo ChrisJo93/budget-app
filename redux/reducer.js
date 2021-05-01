@@ -5,7 +5,7 @@ import { combineReducers } from 'redux';
 const initialState = {
   error: null,
   monthList: [],
-  monthGoal: 'poop',
+  monthGoal: '',
 };
 
 const monthReducer = (state = initialState, action) => {
@@ -20,7 +20,7 @@ const monthReducer = (state = initialState, action) => {
       return { ...state, monthList: action.payload };
 
     case actionTypes.SET_MONTH_GOAL:
-      return { ...state, monthGoal: action.payload };
+      return { ...state, monthGoal: [action.payload] };
     default:
       return state;
   }
@@ -29,4 +29,3 @@ const monthReducer = (state = initialState, action) => {
 export default combineReducers({
   month: monthReducer,
 });
-// AHHH!!

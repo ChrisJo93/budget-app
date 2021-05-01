@@ -155,7 +155,7 @@
 /* Styles for month display */
 
 .month_main {
-  border: solid black 1px;
+  /* border: solid black 1px;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -164,7 +164,16 @@
   margin-right: auto;
   margin-left: 25rem;
   overflow: hidden;
-  max-height: 30rem;
+  max-height: 30rem; */
+  margin: 4px 4px;
+  padding: 4px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  width: 500px;
+  height: 110px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
 }
 
 .month_button {

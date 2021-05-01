@@ -8,20 +8,13 @@ import { monthGoal } from 'redux/actions';
 import MonthDisplay from 'components/month_display_component';
 
 class MonthDisplayView extends Component {
-  componentDidMount() {
-    this.props.dispatch(monthGoal());
-    console.log(this.props.month);
-  }
-
   render() {
-    // const monthList = this.props.monthReducer.monthGoal.map((month, index) => {
-    //   return <MonthDisplay key={index} month={month} />;
-    // });
-
     return (
       <div className={styles.container}>
         <Nav />
-        {/* <article className={styles.month_main}>{monthList}</article> */}
+        <div className={styles.month_main}>
+          <p>Month display</p>
+        </div>
         <Footer />
       </div>
     );
