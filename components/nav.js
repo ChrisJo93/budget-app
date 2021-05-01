@@ -12,7 +12,7 @@ const Nav = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Budgetier
+              My Money
             </a>
           </h2>
         </div>

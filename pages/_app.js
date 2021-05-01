@@ -1,4 +1,4 @@
-import 'styles/globals.css';
+import 'styles/styles.css';
 import { wrapper } from 'redux/store';
 
 function MyApp({ Component, pageProps }) {

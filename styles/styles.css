@@ -1,5 +1,7 @@
-/* @tailwind base;
+/* purgecss start ignore */
+@tailwind base;
 @tailwind components;
+/* purgecss end ignore */
 @tailwind utilities;
 
 * {
@@ -24,4 +26,4 @@ body {
   background-color: #99a2c7;
   height: 100%;
   margin: 1rem;
-} */
+}

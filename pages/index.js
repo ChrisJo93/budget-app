@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Nav from 'components/nav';
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
         <title>Budgetier</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Nav />
       <main>
         <div className="container">Boop</div>
       </main>
