@@ -21,11 +21,8 @@
     "redux": "^4.0.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
     "nodemon": "^2.0.7",
-    "postcss": "^8.2.13",
     "redux-devtools-extension": "^2.13.9",
-    "sound-play": "^1.1.0",
-    "tailwindcss": "^2.1.2"
+    "sound-play": "^1.1.0"
   }
 }
