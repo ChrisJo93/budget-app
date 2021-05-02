@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import Nav from 'components/Nav';
-import Test2 from 'dispatch.class';
-
+import Nav from 'components/Nav/Nav';
+import Wallet from 'components/Wallet/Wallet';
 export default function Home() {
   return (
     <div>
@@ -10,7 +9,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <Test2 />
+      <Wallet />
+
       <main>
         <div className="container"></div>
       </main>
