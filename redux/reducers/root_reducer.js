@@ -9,7 +9,6 @@ const initialState = {
 };
 
 const monthReducer = (state = initialState, action) => {
-  console.log('in reducer', action.payload);
   switch (action.type) {
     case HYDRATE: {
       return { ...state, ...action.payload };
