@@ -4,7 +4,7 @@ import styles from './Nav.module.css';
 const Nav = () => {
   return (
     <header className={styles.nav_container}>
-      <div>
+      <div className=" flex-none">
         <h2>
           <a
             href="https://github.com/ChrisJo93"
@@ -14,15 +14,21 @@ const Nav = () => {
             Logo/Icon
           </a>
         </h2>
+      </div>
 
+      <div className={styles.nav_links}>
         <Link href="/">
           <a className={styles.link}>Overview</a>
         </Link>
+      </div>
 
+      <div className={styles.nav_links}>
         <Link href="/">
           <a className={styles.link}>Space Holder</a>
         </Link>
+      </div>
 
+      <div className={styles.nav_links}>
         <Link href="/">
           <a className={styles.link}>Logout</a>
         </Link>
