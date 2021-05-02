@@ -20,20 +20,11 @@
   width: 0.1vh;
 }
 
-.nav_links:focus {
-  border-bottom: 3px solid purple;
+.nav_links a:focus {
+  border-bottom: 1px solid black;
 }
 
-.nav_links:hover {
-  border-bottom: 3px solid yellow;
+.nav_links a:hover {
+  color: white;
+  border-bottom: 1px solid yellow;
 }
-
-/* .link:focus {
-  border-bottom: 3px solid purple;
-} */
-
-/* .link:hover {
-  border-bottom: 3px solid black;
-} */
-
-/* `flex flex-row flex-nowrap justify-between` */
