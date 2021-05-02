@@ -3,7 +3,12 @@ import styles from './Nav.module.css';
 
 const Nav = () => {
   return (
-    <header className="flex flex-row flex-nowrap justify-between">
+    <header
+      className={[
+        [`flex flex-row flex-nowrap justify-between`],
+        styles.nav_container,
+      ].join(' ')}
+    >
       <div className=" flex-none">
         <h2>
           <a

@@ -11,3 +11,7 @@
 .link:hover {
   border-bottom: 3px solid black;
 }
+
+.nav_container {
+  color: red;
+}
