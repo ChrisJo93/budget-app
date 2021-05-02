@@ -1,11 +1,11 @@
 /* nav.module.css */
 
 .link {
-  padding-bottom: 0.3vh;
+  padding-bottom: 0.1vh;
 }
 
 .link:focus {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid purple;
 }
 
 .link:hover {
@@ -13,5 +13,12 @@
 }
 
 .nav_container {
-  color: red;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: flex-end;
 }
+
+/* `flex flex-row flex-nowrap justify-between` */

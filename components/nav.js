@@ -3,13 +3,8 @@ import styles from './Nav.module.css';
 
 const Nav = () => {
   return (
-    <header
-      className={[
-        [`flex flex-row flex-nowrap justify-between`],
-        styles.nav_container,
-      ].join(' ')}
-    >
-      <div className=" flex-none">
+    <header className={styles.nav_container}>
+      <div>
         <h2>
           <a
             href="https://github.com/ChrisJo93"
@@ -19,21 +14,15 @@ const Nav = () => {
             Logo/Icon
           </a>
         </h2>
-      </div>
 
-      <div className="flex-1 text-center">
         <Link href="/">
           <a className={styles.link}>Overview</a>
         </Link>
-      </div>
 
-      <div className="flex-1 text-center">
         <Link href="/">
           <a className={styles.link}>Space Holder</a>
         </Link>
-      </div>
 
-      <div className="flex-1 text-center">
         <Link href="/">
           <a className={styles.link}>Logout</a>
         </Link>
