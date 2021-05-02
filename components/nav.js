@@ -18,19 +18,19 @@ const Nav = () => {
 
       <div className="flex-1 text-center">
         <Link href="/">
-          <a>Overview</a>
+          <a className={styles.link}>Overview</a>
         </Link>
       </div>
 
       <div className="flex-1 text-center">
         <Link href="/">
-          <a>Space Holder</a>
+          <a className={styles.link}>Space Holder</a>
         </Link>
       </div>
 
       <div className="flex-1 text-center">
         <Link href="/">
-          <a>Logout</a>
+          <a className={styles.link}>Logout</a>
         </Link>
       </div>
     </header>
