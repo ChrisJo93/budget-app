@@ -21,7 +21,7 @@ VALUES ('January'), ('February'), ('March'), ('April'), ('May'), ('June'), ('Jul
 
 
 
-CREATE TABLE "income" (
+CREATE TABLE "wallet" (
     "id" integer DEFAULT PRIMARY KEY,
     "income" numeric,
     "user_id" integer NOT NULL REFERENCES "user"(id),

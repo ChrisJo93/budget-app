@@ -9,6 +9,7 @@ const handle = app.getRequestHandler();
 // Route Includes
 const month = require('./routes/month.router');
 const transaction = require('./routes/transaction.router');
+const wallet = require('./routes/wallet.router');
 
 app.prepare().then(() => {
   const server = express();
@@ -18,6 +19,7 @@ app.prepare().then(() => {
   //Routes
   server.use('/month', month);
   server.use('/transaction', transaction);
+  server.use('/wallet', wallet);
 
   server.get('*', (req, res) => {
     return handle(req, res);

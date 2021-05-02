@@ -1,13 +1,13 @@
-import { month } from './redux/actions';
+import { monthList } from './redux/actions';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Test2 extends Component {
   componentDidMount() {
-    console.log(this.props.dispatch(month()));
+    this.props.dispatch(monthList());
   }
   render() {
-    return <button>ayo baby</button>;
+    return <button>Testing redux actions</button>;
   }
 }
 // const Test2 = () => {
