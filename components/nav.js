@@ -1,11 +1,11 @@
 import Link from 'next/link';
+import styles from './Nav.module.css';
 
 const Nav = () => {
   return (
-    <header className="bg-green-500 flex flex-row flex-nowrap justify-between">
-      <div className="bg-blue-500 flex-none">
+    <header className="flex flex-row flex-nowrap justify-between">
+      <div className=" flex-none">
         <h2>
-          {' '}
           <a
             href="https://github.com/ChrisJo93"
             target="_blank"
@@ -16,19 +16,21 @@ const Nav = () => {
         </h2>
       </div>
 
-      <div className="bg-red-500 flex-1 text-center">
+      <div className="flex-1 text-center">
         <Link href="/">
-          <a className="DELETE ME bg-purple-500">Overview</a>
+          <a>Overview</a>
         </Link>
       </div>
-      <div className="bg-blue-500 flex-1 text-center">
+
+      <div className="flex-1 text-center">
         <Link href="/">
-          <a className=" DELETE ME bg-green-500">Space Holder</a>
+          <a>Space Holder</a>
         </Link>
       </div>
-      <div className="bg-purple-500 flex-1 text-center">
+
+      <div className="flex-1 text-center">
         <Link href="/">
-          <a className="DELETE ME bg-yellow-500">Logout</a>
+          <a>Logout</a>
         </Link>
       </div>
     </header>
