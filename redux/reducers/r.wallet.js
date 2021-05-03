@@ -2,8 +2,8 @@ import { actionTypes } from '../actions';
 import { HYDRATE } from 'next-redux-wrapper';
 
 const initialState = {
-  walletList: [],
   error: null,
+  walletList: [],
 };
 
 const wallet = (state = initialState, action) => {
@@ -14,7 +14,7 @@ const wallet = (state = initialState, action) => {
     case actionTypes.FAILURE:
       return { ...state, ...{ error: action.error } };
 
-    case actionTypes.GET_WALLET_LIST:
+    case actionTypes.SET_WALLET_LIST:
       return { ...state, walletList: action.payload };
 
     default:

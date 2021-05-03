@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 class Test2 extends Component {
   componentDidMount() {
     this.props.dispatch(walletList());
-    console.log(this.props);
   }
 
   render() {

@@ -4,8 +4,8 @@ const WalletList = (props) => {
   return (
     <div className={styles.card}>
       <div className={styles.card_container}>
-        <h2>{props.name}</h2>
         <p>{props.amount}</p>
+        <h3>{props.name}</h3>
       </div>
     </div>
   );
