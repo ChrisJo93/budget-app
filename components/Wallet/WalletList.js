@@ -1,6 +1,6 @@
 import styles from './Wallet.module.css';
 
-const Accounts = (props) => {
+const WalletList = (props) => {
   return (
     <div className={styles.card}>
       <div className={styles.card_container}>
@@ -11,4 +11,4 @@ const Accounts = (props) => {
   );
 };
 
-export default Accounts;
+export default WalletList;

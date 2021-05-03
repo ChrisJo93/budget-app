@@ -3,8 +3,8 @@ export const actionTypes = {
   SET_MONTH_LIST: 'SET_MONTH_LIST',
   GET_MONTH_GOAL: 'GET_MONTH_GOAL',
   SET_MONTH_GOAL: 'SET_MONTH_GOAL',
-  GET_WALLET: 'GET_WALLET',
-  SET_WALLET: 'SET_WALLET',
+  GET_WALLET_LIST: 'GET_WALLET_LIST',
+  SET_WALLET_LIST: 'SET_WALLET_LIST',
   FAILURE: 'FAILURE',
   ERROR: 'Sorry, maybe the data sent was wrong?',
 };
@@ -24,6 +24,6 @@ export function monthGoal() {
   return { type: actionTypes.GET_MONTH_GOAL };
 }
 
-export function wallet() {
-  return { type: actionTypes.GET_WALLET };
+export function walletList() {
+  return { type: actionTypes.GET_WALLET_LIST };
 }

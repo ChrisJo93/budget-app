@@ -2,8 +2,8 @@ import { applyMiddleware, createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { createWrapper } from 'next-redux-wrapper';
 
-import rootReducer from './reducers/root_reducer';
-import rootSaga from './sagas/root';
+import rootReducer from './reducers/r.root';
+import rootSaga from './sagas/s.root';
 
 const bindMiddleware = (middleware) => {
   if (process.env.NODE_ENV !== 'production') {
