@@ -15,10 +15,6 @@ export default function Home() {
           <Wallet />
           <Wallet />
           <Wallet />
-          <Wallet />
-          <Wallet />
-          <Wallet />
-          <Wallet />
         </div>
       </main>
     </div>
