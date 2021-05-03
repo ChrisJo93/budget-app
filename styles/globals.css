@@ -9,6 +9,10 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 3vw;
+  display: flex;
+  overflow: scroll;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 html,

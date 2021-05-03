@@ -9,10 +9,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <Wallet />
 
       <main>
-        <div className="container"></div>
+        <div className="container">
+          <Wallet />
+          <Wallet />
+          <Wallet />
+          <Wallet />
+          <Wallet />
+          <Wallet />
+          <Wallet />
+        </div>
       </main>
     </div>
   );
