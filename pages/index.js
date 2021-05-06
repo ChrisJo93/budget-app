@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Nav from 'components/Nav/Nav';
 import Wallet from 'components/Wallet/Wallet';
+import Transaction from 'components/Transaction/Transaction';
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <div className="container">
           <Wallet />
           <Wallet />
-          <Wallet />
+          <Transaction />
         </div>
       </main>
     </div>

@@ -16,8 +16,15 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:category', (req, res) => {
-  const query = `SELECT * FROM "transaction"
-  JOIN "transaction_category" on "user_transaction".category_id = "transaction_category".id
+  const query = `SELECT 
+  "transaction".id, 
+  "transaction".category_id, 
+  "transaction".amount, 
+  "transaction".item_name,
+  "transaction".date,
+  "transaction_category".category_name
+  FROM "transaction"
+  JOIN "transaction_category" on "transaction".category_id = "transaction_category".id
   WHERE "transaction_category".id = $1;`;
   pool
     .query(query, [req.params.category])
