@@ -8,7 +8,7 @@
   margin: auto;
 }
 
-.card {
+.card_container {
   border: 1px solid black;
   border-radius: 3vw;
   padding: 1vh;
@@ -17,15 +17,22 @@
   box-shadow: 1px 2px 3px;
 }
 
-.card_container {
+.card {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  height: 20vh;
+  width: 40vh;
 }
 
 .card_top_right {
   flex: 50%;
   text-align: right;
+  position: relative;
+}
+
+.card_container:hover {
+  background-color: blue;
 }
 
 /* Nextjs image tag with z-index 0 background fill will work for page backgrounds. Not so good for cards. */

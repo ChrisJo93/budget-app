@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+
 import styles from './Wallet.module.css';
 
-import { walletList } from 'redux/actions';
 import WalletList from './WalletList';
+import { walletList } from 'redux/actions';
 
-class Wallet extends Component {
-  componentDidMount() {
-    this.props.dispatch(walletList());
-  }
+const Wallet = (props) => {
+  const dispatch = useDispatch();
+  useEffect(() => dispatch(walletList()));
 
-  render() {
-    const wallets = this.props.wallet.walletList.map((wallet, index) => {
-      return (
-        <WalletList
-          key={index}
-          name={wallet.wallet_name}
-          amount={wallet.income}
-        />
-      );
-    });
-    return <div className={styles.wallet_container}>{wallets}</div>;
-  }
-}
+  const wallets = props.wallet.walletList.map((wallet, index) => {
+    return (
+      <WalletList
+        key={index}
+        name={wallet.wallet_name}
+        amount={wallet.income}
+      />
+    );
+  });
+  return <div className={styles.wallet_container}>{wallets}</div>;
+};
 
 export default connect((state) => state)(Wallet);
