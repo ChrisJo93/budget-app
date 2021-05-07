@@ -15,10 +15,10 @@ const transaction = (state = initialState, action) => {
     case actionTypes.FAILURE:
       return { ...state, ...{ error: action.error } };
 
-    case actionTypes.SET_MONTH_LIST:
+    case actionTypes.SET_TRANSACTION_LIST:
       return { ...state, transactionList: action.payload };
 
-    case actionTypes.SET_MONTH_GOAL:
+    case actionTypes.SET_TRANSACTION_BY_CATEGORY:
       return { ...state, transactionByCategory: action.payload };
     default:
       return state;

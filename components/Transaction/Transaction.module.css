@@ -1,0 +1,13 @@
+.transactions {
+  background-color: blue;
+}
+
+.transaction_container {
+  width: 20vw;
+  height: 90vh;
+  position: relative;
+  background: rgba(218, 161, 161, 1);
+  border-radius: 3vw;
+  overflow: visible;
+  margin: auto;
+}

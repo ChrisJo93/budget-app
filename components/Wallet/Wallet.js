@@ -11,13 +11,9 @@ const Wallet = (props) => {
   const dispatch = useDispatch();
   useEffect(() => dispatch(walletList()));
 
-  const wallets = props.wallet.walletList.map((wallet, index) => {
+  const wallets = props.wallet.walletList.map((item, index) => {
     return (
-      <WalletList
-        key={index}
-        name={wallet.wallet_name}
-        amount={wallet.income}
-      />
+      <WalletList key={index} name={item.wallet_name} amount={item.income} />
     );
   });
   return <div className={styles.wallet_container}>{wallets}</div>;
