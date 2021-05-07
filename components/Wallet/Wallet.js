@@ -16,7 +16,14 @@ const Wallet = (props) => {
       <WalletList key={index} name={item.wallet_name} amount={item.income} />
     );
   });
-  return <div className={styles.wallet_container}>{wallets}</div>;
+  return (
+    <div className={styles.wallet_container}>
+      {wallets}
+      <div className={`${styles.card_container} ${styles.card}`}>
+        Add wallet?
+      </div>
+    </div>
+  );
 };
 
 export default connect((state) => state)(Wallet);

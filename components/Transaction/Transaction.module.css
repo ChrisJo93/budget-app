@@ -1,13 +1,29 @@
-.transactions {
-  background-color: blue;
-}
-
 .transaction_container {
   width: 20vw;
   height: 90vh;
   position: relative;
-  background: rgba(218, 161, 161, 1);
+  background: rgba(218, 161, 161, 0);
   border-radius: 3vw;
   overflow: visible;
   margin: auto;
+}
+
+.transactions {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 10px;
+  border: 1px solid black;
+  max-height: 73px;
+  align-content: space-between;
+  align-items: flex-start;
+}
+
+.transaction_amount {
+  align-content: center;
+  padding: 3px;
+}
+
+.transaction_name {
+  flex-grow: 1;
+  padding: 3px;
 }

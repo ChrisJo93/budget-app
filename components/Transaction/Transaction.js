@@ -13,11 +13,21 @@ const Transaction = (props) => {
 
   const transactions = props.transaction.transactionList.map((item, index) => {
     return (
-      <TransactionList key={index} name={item.name} amount={item.amount} />
+      <TransactionList
+        key={index}
+        name={item.item_name}
+        amount={item.amount}
+        category={item.category_name}
+      />
     );
   });
 
-  return <div className={styles.transaction_container}>{transactions}</div>;
+  return (
+    <div className={styles.transaction_container}>
+      <h4>Transactions</h4>
+      {transactions}
+    </div>
+  );
 };
 
 export default connect((state) => state)(Transaction);

@@ -3,7 +3,15 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  const query = `SELECT * FROM "transaction";`;
+  const query = `SELECT 
+  "transaction".id, 
+  "transaction".category_id, 
+  "transaction".amount, 
+  "transaction".item_name,
+  "transaction".date,
+  "transaction_category".category_name
+  FROM "transaction"
+  JOIN "transaction_category" on "transaction".category_id = "transaction_category".id;`;
   pool
     .query(query)
     .then((result) => {

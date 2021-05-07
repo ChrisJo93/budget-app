@@ -21,8 +21,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 20vh;
-  width: 40vh;
+  height: 10rem;
+  width: 20rem;
 }
 
 .card_top_right {
@@ -34,5 +34,3 @@
 .card_container:hover {
   background-color: blue;
 }
-
-/* Nextjs image tag with z-index 0 background fill will work for page backgrounds. Not so good for cards. */

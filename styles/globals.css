@@ -25,3 +25,5 @@ body {
   height: 100%;
   margin: 1rem;
 }
+
+/* Nextjs image tag with z-index 0 background fill will work for page backgrounds. Not so good for cards. */
