@@ -3,6 +3,8 @@ import Nav from 'components/Nav/Nav';
 import Wallet from 'components/Wallet/Wallet';
 import Transaction from 'components/Transaction/Transaction';
 
+import styles from './index.module.css';
+
 export default function Home() {
   return (
     <div>
@@ -15,6 +17,10 @@ export default function Home() {
       <main>
         <div className="container">
           <Wallet />
+          <div className={styles.test}>
+            <Transaction />
+            <Transaction />
+          </div>
           <Transaction />
         </div>
       </main>
