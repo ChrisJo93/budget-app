@@ -4,7 +4,7 @@ import styles from './Nav.module.css';
 const Nav = () => {
   return (
     <header className={styles.nav_container}>
-      <div className=" flex-none">
+      <div>
         <h2>
           <a
             href="https://github.com/ChrisJo93"

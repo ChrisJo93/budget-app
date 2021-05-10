@@ -5,6 +5,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
+  background-color: purple;
 }
 
 .nav_logo {

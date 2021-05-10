@@ -12,18 +12,20 @@ export default function Home() {
         <title>Budgetier</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
 
       <main>
         <div className="background1">
+          <Nav />
           <div className="background2">
-            <div className="container">
-              <Wallet />
-              <div className={styles.test}>
-                <Transaction />
+            <div className="background3">
+              <div className="container">
+                <Wallet />
+                <div className={styles.test}>
+                  <Transaction />
+                  <Transaction />
+                </div>
                 <Transaction />
               </div>
-              <Transaction />
             </div>
           </div>
         </div>
