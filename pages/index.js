@@ -15,13 +15,17 @@ export default function Home() {
       <Nav />
 
       <main>
-        <div className="container">
-          <Wallet />
-          <div className={styles.test}>
-            <Transaction />
-            <Transaction />
+        <div className="background1">
+          <div className="background2">
+            <div className="container">
+              <Wallet />
+              <div className={styles.test}>
+                <Transaction />
+                <Transaction />
+              </div>
+              <Transaction />
+            </div>
           </div>
-          <Transaction />
         </div>
       </main>
     </div>
