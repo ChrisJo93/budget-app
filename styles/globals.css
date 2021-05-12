@@ -2,14 +2,14 @@
   box-sizing: border-box;
 }
 
-.container {
+.app_container {
   display: flex;
   background-color: #e8edf6;
   border-radius: 3vw;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
-  height: 90%;
+  width: 99%;
+  height: 100%;
   z-index: 9999;
   position: absolute;
   overflow: scroll;
@@ -21,7 +21,7 @@
   position: absolute;
   width: 90vw;
   height: 90vh;
-  z-index: 500;
+  z-index: 1;
   box-sizing: border-box;
   border-radius: 3vw;
   background-size: cover;
@@ -32,36 +32,48 @@
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .background2 {
   display: flex;
   background-color: blue;
   position: absolute;
-  width: 90%;
-  height: 90%;
-  z-index: 100;
+  width: 99%;
+  height: 100%;
+  z-index: 2;
   box-sizing: border-box;
   padding-left: 2%;
   border-radius: 3vw;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: space-between;
-  justify-content: center;
-  align-items: flex-start;
+  align-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .background3 {
   display: flex;
   background-color: green;
   position: absolute;
-  width: 90%;
-  height: 90%;
-  z-index: 10;
+  width: 99%;
+  height: 100%;
+  z-index: 3;
   box-sizing: border-box;
   padding-left: 2%;
   border-radius: 3vw;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.nav {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  top: -100%;
 }
 
 html,
