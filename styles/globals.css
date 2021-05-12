@@ -2,14 +2,10 @@
   box-sizing: border-box;
 }
 
-.main {
-  position: relative;
-}
-
 .container {
+  display: flex;
   background-color: #e8edf6;
   border-radius: 3vw;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 90%;
@@ -20,6 +16,7 @@
 }
 
 .background1 {
+  display: flex;
   background-color: red;
   position: absolute;
   width: 90vw;
@@ -32,8 +29,14 @@
   margin-left: -45vw;
   top: 50%;
   left: 50%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
 }
+
 .background2 {
+  display: flex;
   background-color: blue;
   position: absolute;
   width: 90%;
@@ -42,9 +45,15 @@
   box-sizing: border-box;
   padding-left: 2%;
   border-radius: 3vw;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .background3 {
+  display: flex;
   background-color: green;
   position: absolute;
   width: 90%;
