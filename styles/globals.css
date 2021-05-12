@@ -4,17 +4,40 @@
 
 .main {
   margin: 1rem;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
   overflow: hidden;
-  z-index: 1;
+  box-sizing: border-box;
 }
 
 .background1 {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: red;
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.background2 {
   min-width: 100vw;
   min-height: 100vh;
-  background-color: red;
-  position: relative;
-  z-index: 2;
+  background-color: green;
+  position: absolute;
+  z-index: 3;
+  overflow: hidden;
 }
+
+/* .background3 {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: blue;
+  position: relative;
+  z-index: 4;
+  top: -206vh;
+  left: 1vw;
+} */
 
 .app_container {
   display: flex;
