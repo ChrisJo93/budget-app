@@ -3,8 +3,6 @@ import Nav from 'components/Nav/Nav';
 import Wallet from 'components/Wallet/Wallet';
 import Transaction from 'components/Transaction/Transaction';
 
-import styles from './index.module.css';
-
 export default function Home() {
   return (
     <div>
@@ -13,24 +11,99 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className="main">
+        <Nav />
         <div className="background1">
-          <div className="nav">
-            <Nav />
-          </div>
-
-          <div className="background2">
-            <div className="background3">
-              <div className="app_container">
-                <Wallet />
-                <div className={styles.test}>
-                  <Transaction />
-                  <Transaction />
-                </div>
-                <Transaction />
-              </div>
-            </div>
-          </div>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>{' '}
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>{' '}
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>{' '}
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>{' '}
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>{' '}
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>{' '}
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>{' '}
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>{' '}
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>{' '}
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>{' '}
+          <p>
+            gagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagwgagagw
+          </p>
+        </div>
+        <div className="app_container">
+          {/* <Wallet />
+          <Transaction />
+          <Transaction />
+          <Transaction />
+          <Transaction />
+          <Transaction />
+          <Transaction />
+          <Transaction />
+          <Transaction />
+          <Transaction /> */}
         </div>
       </main>
     </div>
