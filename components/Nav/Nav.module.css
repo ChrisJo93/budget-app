@@ -1,10 +1,6 @@
 /* nav.module.css */
 
 .nav_container {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center; */
   background-color: #e6e9f1;
 }
 
@@ -16,39 +12,17 @@
 }
 
 .nav_container li {
-  padding: 1rem;
+  padding-top: 2rem;
   margin: 1rem;
-  background-color: black;
+  height: 3em;
 }
 
-.nav_container a::before {
-  content: '\00a0';
-  background-color: yellow;
+.nav_container a {
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .nav_container a:hover::before {
   content: '\00a0';
   background-color: black;
 }
-
-/* .nav_logo {
-  color: red;
-  flex: 1;
-}
-
-.nav_links {
-  color: blue;
-  flex: 1;
-  padding-bottom: 0.1vh;
-  text-align: center;
-  width: 0.1vh;
-}
-
-.nav_links a:focus {
-  border-bottom: 1px solid black;
-}
-
-.nav_links a:hover {
-  color: white;
-  border-bottom: 1px solid yellow;
-} */
