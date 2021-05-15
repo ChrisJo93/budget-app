@@ -15,24 +15,23 @@ const Nav = () => {
           </a>
         </h2>
       </div>
-
-      <div className={styles.nav_links}>
-        <Link href="/">
-          <a className={styles.link}>Overview</a>
-        </Link>
-      </div>
-
-      <div className={styles.nav_links}>
-        <Link href="/">
-          <a className={styles.link}>Space Holder</a>
-        </Link>
-      </div>
-
-      <div className={styles.nav_links}>
-        <Link href="/">
-          <a className={styles.link}>Logout</a>
-        </Link>
-      </div>
+      <ul>
+        <li>
+          <Link href="/">
+            <a>Overview</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>Space Holder</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>Logout</a>
+          </Link>
+        </li>
+      </ul>
     </header>
   );
 };

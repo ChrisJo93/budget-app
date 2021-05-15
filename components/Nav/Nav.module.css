@@ -1,14 +1,37 @@
 /* nav.module.css */
 
 .nav_container {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: center;
+  align-content: center; */
   background-color: #e6e9f1;
 }
 
-.nav_logo {
+.nav_container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav_container li {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: black;
+}
+
+.nav_container a::before {
+  content: '\00a0';
+  background-color: yellow;
+}
+
+.nav_container a:hover::before {
+  content: '\00a0';
+  background-color: black;
+}
+
+/* .nav_logo {
   color: red;
   flex: 1;
 }
@@ -28,4 +51,4 @@
 .nav_links a:hover {
   color: white;
   border-bottom: 1px solid yellow;
-}
+} */
