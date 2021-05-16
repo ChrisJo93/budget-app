@@ -6,6 +6,10 @@
   margin-left: 21vw;
 }
 
+.nav_container div {
+  border-bottom: 2px solid transparent;
+}
+
 .nav_container div:hover {
   border-bottom: 2px solid black;
   z-index: 1000;
@@ -19,14 +23,14 @@
   justify-content: space-between;
 }
 
+.nav_container a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
 .nav_container li {
   padding-top: 2rem;
   margin: 1rem;
   height: 3em;
   list-style-type: none;
-}
-
-.nav_container a {
-  text-decoration: none;
-  font-size: 16px;
 }

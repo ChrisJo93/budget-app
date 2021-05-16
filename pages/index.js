@@ -14,8 +14,9 @@ export default function Home() {
       <div className="background1">
         <Nav />
         <div className="background2"></div>
+        <div className="background3"></div>
+        <Wallet />
       </div>
-      {/* <div className="background3"></div> */}
     </div>
   );
 }

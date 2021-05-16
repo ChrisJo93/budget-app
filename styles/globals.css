@@ -16,27 +16,27 @@
 .background2 {
   height: 100vh;
   width: 82vw;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   box-sizing: border-box;
   background-color: red;
   border-radius: 3vw;
-  bottom: 1.1rem;
+  top: 5.99rem;
   left: 6.375rem;
   z-index: 3;
 }
 
 .background3 {
   height: 100vh;
-  max-width: 100vw;
-  position: relative;
+  width: 82vw;
+  position: absolute;
   overflow: hidden;
   box-sizing: border-box;
   background-color: blue;
   border-radius: 3vw;
-  bottom: 488px;
-  left: -13px;
-  z-index: 2;
+  top: 7rem;
+  left: 5rem;
+  z-index: 1;
 }
 
 /* .app_container {
