@@ -2,6 +2,8 @@
 
 .nav_container {
   background-color: #e6e9f1;
+  width: 44vw;
+  margin-left: 21vw;
 }
 
 .nav_container div:hover {
@@ -20,9 +22,10 @@
   padding-top: 2rem;
   margin: 1rem;
   height: 3em;
+  list-style-type: none;
 }
 
 .nav_container a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
