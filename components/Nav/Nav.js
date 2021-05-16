@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import styles from './Nav.module.css';
 
-const Nav = () => {
+const Nav = (props) => {
+  // taking in props for user image in top right corner
+  //later change
+  console.log(props);
   return (
     <header className={styles.nav_container}>
       <ul>

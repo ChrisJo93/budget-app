@@ -11,10 +11,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="background1">
+      <div className="background1">
         <Nav />
-      </main>
-      <div className="background2"></div>
+        <div className="background2"></div>
+      </div>
+      {/* <div className="background3"></div> */}
     </div>
   );
 }
