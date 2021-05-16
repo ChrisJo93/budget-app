@@ -15,6 +15,7 @@ export default function Home() {
         <Nav />
         <div className="background2"></div>
         <div className="background3"></div>
+        <div className="background4"></div>
         <Wallet />
       </div>
     </div>
