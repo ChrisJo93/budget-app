@@ -12,9 +12,9 @@ export default function Home() {
       </Head>
 
       <main className="background1">
-        <div className="background2"></div>
         <Nav />
       </main>
+      <div className="background2"></div>
     </div>
   );
 }

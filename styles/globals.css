@@ -10,6 +10,7 @@
   box-sizing: border-box;
   background-color: #e6e9f1;
   border-radius: 3vw;
+  z-index: 10;
 }
 
 .background2 {
@@ -20,7 +21,9 @@
   box-sizing: border-box;
   background-color: red;
   border-radius: 3vw;
-  top: 10px;
+  bottom: 488px;
+  left: -13px;
+  z-index: 1;
 }
 
 /* .app_container {
