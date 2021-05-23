@@ -7,6 +7,11 @@ import styles from './Transaction.module.css';
 import TransactionList from './TransactionList';
 import { transactionList } from 'redux/actions';
 
+/* To Do:
+1. Form for transaction entry
+2. Import receipt scanner.
+*/
+
 const Transaction = (props) => {
   const dispatch = useDispatch();
   useEffect(() => dispatch(transactionList()));
