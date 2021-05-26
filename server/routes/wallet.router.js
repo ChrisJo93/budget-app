@@ -9,7 +9,7 @@ const router = express.Router();
 */
 
 router.get('/', (req, res) => {
-  const query = `SELECT * FROM "wallet";`;
+  const query = `SELECT "wallet".income, "wallet".user_id, "wallet".post_date, "wallet".wallet_name FROM "wallet";`;
   pool
     .query(query)
     .then((result) => {
