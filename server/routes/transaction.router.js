@@ -92,27 +92,6 @@ router.post('/', (req, res) => {
     });
 });
 
-router.delete('/', (req, res) => {
-  const items = req.body;
-  const query = `DELETE FROM "transaction" WHERE id = $1;`;
-
-  const promises = items.map((item) => {
-    pool.query(query, [item.id]).catch((err) => {
-      if (err) {
-        console.log(`mess`, err.detail, err.column, item);
-      }
-    });
-  });
-  //can handle multiple delete requests at once.
-  //This will be used on the transaction table for the user to prep multiple item deletes at once.
-  Promise.all(promises)
-    .then(() => res.sendStatus(201))
-    .catch((err) => {
-      console.log(`error deleting transactions`, err);
-      res.sendStatus(500);
-    });
-});
-
 router.put('/', (req, res) => {
   const items = req.body;
   const query = `UPDATE "transaction" SET 
@@ -143,6 +122,27 @@ router.put('/', (req, res) => {
     .then(() => res.sendStatus(201))
     .catch((err) => {
       console.log(`error updating transactions`, err);
+      res.sendStatus(500);
+    });
+});
+
+router.delete('/', (req, res) => {
+  const items = req.body;
+  const query = `DELETE FROM "transaction" WHERE id = $1;`;
+
+  const promises = items.map((item) => {
+    pool.query(query, [item.id]).catch((err) => {
+      if (err) {
+        console.log(`mess`, err.detail, err.column, item);
+      }
+    });
+  });
+  //can handle multiple delete requests at once.
+  //This will be used on the transaction table for the user to prep multiple item deletes at once.
+  Promise.all(promises)
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+      console.log(`error deleting transactions`, err);
       res.sendStatus(500);
     });
 });

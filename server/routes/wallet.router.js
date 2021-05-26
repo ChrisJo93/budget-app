@@ -1,15 +1,15 @@
 const express = require('express');
 const pool = require('../modules/pool');
+const { route } = require('./month.router');
 const router = express.Router();
 
 /* To Do:
-1. Post route for wallets.
-2. Put route for wallets.
+
 3. Delete route for wallets. 
 */
 
 router.get('/', (req, res) => {
-  const query = `SELECT "wallet".income, "wallet".user_id, "wallet".post_date, "wallet".wallet_name FROM "wallet";`;
+  const query = `SELECT * FROM "wallet";`;
   pool
     .query(query)
     .then((result) => {
@@ -71,6 +71,53 @@ router.post('/', (req, res) => {
         err.column,
         item
       );
+      res.sendStatus(500);
+    });
+});
+
+router.put('/', (req, res) => {
+  const items = req.body;
+  const query = `UPDATE "wallet" SET
+    income = $1,
+    post_date = $2,
+    wallet_name =$3
+
+    WHERE id = $4;`;
+
+  const promises = items.map((item) => {
+    pool
+      .query(query, [item.income, item.post_date, item.wallet_name, item.id])
+      .catch((err) => {
+        if (err) {
+          console.log(`Error updating wallets`, err);
+        }
+      });
+  });
+
+  Promise.all(promises)
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+      console.log(`error updating wallets`, err);
+      res.sendStatus(500);
+    });
+});
+
+router.delete('/', (req, res) => {
+  const items = req.body;
+  const query = `DELETE FROM "wallet" WHERE id = $1;`;
+
+  const promises = items.map((item) => {
+    pool.query(query, [item.id]).catch((err) => {
+      if (err) {
+        console.log(`Error deleting wallet`, err);
+      }
+    });
+  });
+
+  Promise.all(promises)
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+      console.log(`error deleting wallets`, err);
       res.sendStatus(500);
     });
 });

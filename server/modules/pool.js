@@ -4,7 +4,7 @@ const url = require('url');
 pg.types.setTypeParser(pg.types.builtins.NUMERIC, (value) => {
   return parseFloat(value);
 });
-//if there's a numeric type, parse it to integer before sending on get response. Needs tweaking
+//if there's a numeric type, parse it to float. Not really an elegant solution, certainly hamfisted. But it works for this application
 
 let config = {};
 
