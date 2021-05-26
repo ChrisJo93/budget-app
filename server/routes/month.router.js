@@ -2,6 +2,13 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
+/* To Do
+1. Post route for new month goal
+2. Put route to update month goal
+3. Delete route to delete goal
+4. 
+ */
+
 //fetches all months for form list
 router.get('/month_list', (req, res) => {
   const query = `SELECT * FROM "month_list";`;
