@@ -2,7 +2,7 @@ const pg = require('pg');
 const url = require('url');
 
 pg.types.setTypeParser(pg.types.builtins.NUMERIC, (value) => {
-  return parseInt(value);
+  return parseFloat(value);
 });
 //if there's a numeric type, parse it to integer before sending on get response. Needs tweaking
 
