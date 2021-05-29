@@ -1,13 +1,7 @@
 const express = require('express');
 const pool = require('../modules/pool');
+const { route } = require('./transaction.router');
 const router = express.Router();
-
-/* To Do
-1. Post route for new month goal
-2. Put route to update month goal
-3. Delete route to delete goal
-4. 
- */
 
 //fetches all months for form list
 router.get('/month_list', (req, res) => {
@@ -37,16 +31,15 @@ router.get('/month_goal', (req, res) => {
     });
 });
 
-//fetches total(sum) amount of all categories by month. Reworked database so this queries by date.
-//further code is needed, probably in front end, to determine month by year.
-router.get('/:id', (req, res) => {
-  const query = `SELECT SUM(amount) as monthly_total 
-  FROM "month_goal" 
-  JOIN "month_list" 
-  ON "month_goal".month_id = month_list.id
-  WHERE "month_goal".month_id = $1;`;
+router.get('/month_goal/:id/:year', (req, res) => {
+  const query = ` SELECT "month_list".month_name, SUM(amount) as total 
+  FROM "month_goal" INNER JOIN "month_list" on "month_goal".month_id = "month_list".id 
+  WHERE "month_list".id = $1 
+  AND DATE_PART('year', "month_goal".date) = $2
+  GROUP BY "month_list".month_name;`;
+
   pool
-    .query(query, [req.params.id])
+    .query(query, [req.params.id, req.params.year])
     .then((result) => {
       res.send(result.rows);
     })
@@ -56,27 +49,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// Query to return month's sum total with specifier
-// SELECT
-// "month".month_name,
-// SUM(amount) as total
-// FROM
-// "user_budget_goal"
-// INNER JOIN "month" ON "user_budget_goal".month_id = "month".id
-// WHERE "month".month_name = 'February'
-// GROUP BY
-// "month".month_name;
-
-/*
-In Progress:
-Get budget set for specific month based on date and month_id
-Post new monthly budget
-Put update monthly budget
-Delete month budget
-Oh boy, I was gone 2 days and forgot what I did lol
-*/
-
-router.post('/', (req, res) => {
+router.post('/month_goal', (req, res) => {
   const items = req.body;
   //set 2 queries to handle date entry. If user inputs date, run query. If no date entered, run query 2.
   const query = `INSERT INTO "month_goal" ("month_id", "category_id", "date", "amount", "user_id")
@@ -119,6 +92,65 @@ router.post('/', (req, res) => {
     .then(() => res.sendStatus(201))
     .catch((err) => {
       console.log(`error sending month goals`, err);
+      res.sendStatus(500);
+    });
+});
+
+router.put('/month_goal', (req, res) => {
+  const items = req.body;
+  const query = `UPDATE "month_goal" SET 
+  month_id = $1,
+  category_id = $2,
+  date = $3,
+  amount = $4 
+
+  WHERE id = $5;`;
+
+  const promises = items.map((item) => {
+    pool
+      .query(query, [
+        item.month_id,
+        item.category_id,
+        item.date,
+        item.amount,
+        item.id,
+      ])
+      .catch((err) => {
+        if (err) {
+          console.log(
+            `Error updating month goal`,
+            err.detail,
+            err.column,
+            item
+          );
+        }
+      });
+  });
+
+  Promise.all(promises)
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+      console.log(`error updating months`, err);
+      res.sendStatus(500);
+    });
+});
+
+router.delete('/month_goal', (req, res) => {
+  const items = req.body;
+  const query = `DELETE FROM "month_goal" WHERE id = $1;`;
+
+  const promises = items.map((item) => {
+    pool.query(query, [item.id]).catch((err) => {
+      if (err) {
+        console.log(`Error deleting goal`, err.detail, err.column, item);
+      }
+    });
+  });
+
+  Promise.all(promises)
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+      console.log(`error deleting goal`, err);
       res.sendStatus(500);
     });
 });

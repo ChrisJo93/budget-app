@@ -15,7 +15,7 @@ export const actionTypes = {
   SET_TRANSACTION_LIST: 'SET_TRANSACTION_LIST',
   SET_TRANSACTION_BY_CATEGORY: 'SET_TRANSACTION_BY_CATEGORY',
 
-  //error/failure actions
+  //error/failure actions88
   FAILURE: 'FAILURE',
   ERROR: 'Sorry, maybe the data sent was wrong?',
 };

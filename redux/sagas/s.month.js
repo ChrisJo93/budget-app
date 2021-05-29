@@ -32,6 +32,18 @@ function* getMonthGoal() {
   }
 }
 
+function* postMonthGoal(action) {
+  try {
+    yield axios.post(
+      `/month/month_goal/${action.payload.id}`,
+      action.payload.year
+    );
+    yield put({ type: 'POST_MONTH_GOAL', payload: ac });
+  } catch (err) {
+    console.log('ERROR POSTING groomer:', err, action.payload.id);
+  }
+}
+
 function* monthSaga() {
   yield takeLatest(actionTypes.GET_MONTH_LIST, getMonthList);
   yield takeLatest(actionTypes.GET_MONTH_GOAL, getMonthGoal);
