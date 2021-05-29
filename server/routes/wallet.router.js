@@ -1,12 +1,6 @@
 const express = require('express');
 const pool = require('../modules/pool');
-const { route } = require('./month.router');
 const router = express.Router();
-
-/* To Do:
-
-3. Delete route for wallets. 
-*/
 
 router.get('/', (req, res) => {
   const query = `SELECT * FROM "wallet";`;

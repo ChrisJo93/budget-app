@@ -2,6 +2,12 @@ import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 import { actionTypes } from '../actions';
 
+/* To Do
+1. Post route function
+2. Put route function
+3. Delete route function
+ */
+
 function* getTransactionList() {
   try {
     const response = yield axios.get('/transaction');

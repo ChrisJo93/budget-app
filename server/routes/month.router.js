@@ -75,4 +75,52 @@ Put update monthly budget
 Delete month budget
 Oh boy, I was gone 2 days and forgot what I did lol
 */
+
+router.post('/', (req, res) => {
+  const items = req.body;
+  //set 2 queries to handle date entry. If user inputs date, run query. If no date entered, run query 2.
+  const query = `INSERT INTO "month_goal" ("month_id", "category_id", "date", "amount", "user_id")
+  VALUES ($1, $2, $3, $4, $5);`;
+  const query2 = `INSERT INTO "month_goal" ("month_id", "category_id", "amount", "user_id")
+  VALUES ($1, $2, $3, $4);`;
+
+  const promises = items.map((item) => {
+    if (item.date != null) {
+      pool
+        .query(query, [
+          item.month_id,
+          item.category_id,
+          item.date,
+          item.amount,
+          item.user_id,
+        ])
+        .catch((err) => {
+          if (err) {
+            console.log(`Error posting goal`, err.detail, err.column, item);
+          }
+        });
+    } else {
+      pool
+        .query(query2, [
+          item.month_id,
+          item.category_id,
+          item.amount,
+          item.user_id,
+        ])
+        .catch((err) => {
+          if (err) {
+            console.log(`Error posting goal`, err.detail, err.column, item);
+          }
+        });
+    }
+  });
+
+  Promise.all(promises)
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+      console.log(`error sending month goals`, err);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;

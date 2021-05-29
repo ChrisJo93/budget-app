@@ -1,6 +1,9 @@
 import { actionTypes } from '../actions';
 import { HYDRATE } from 'next-redux-wrapper';
 
+/* To Do
+ */
+
 const initialState = {
   error: null,
   monthList: [],
