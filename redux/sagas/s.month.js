@@ -32,21 +32,37 @@ function* getMonthGoal() {
   }
 }
 
+function* getMonthGoalTotal(action) {
+  try {
+    const response = yield axios.get(
+      `/month/month_goal/${action.payload.id}/${action.payload.year}`
+    );
+    yield put({
+      type: actionTypes.SET_MONTH_GOAL_TOTAL,
+      payload: response.data,
+    });
+  } catch (err) {
+    yield put({
+      type: actionTypes.FAILURE,
+      payload: 'problem loading month total',
+    });
+  }
+}
+
 function* postMonthGoal(action) {
   try {
-    yield axios.post(
-      `/month/month_goal/${action.payload.id}`,
-      action.payload.year
-    );
-    yield put({ type: 'POST_MONTH_GOAL', payload: ac });
+    yield axios.post(`/month/month_goal`, action.payload);
+    yield put({ type: actionTypes.GET_MONTH_GOAL });
   } catch (err) {
-    console.log('ERROR POSTING groomer:', err, action.payload.id);
+    console.log('Error posting month goal in saga:', err, action.payload);
   }
 }
 
 function* monthSaga() {
   yield takeLatest(actionTypes.GET_MONTH_LIST, getMonthList);
   yield takeLatest(actionTypes.GET_MONTH_GOAL, getMonthGoal);
+  yield takeLatest(actionTypes.GET_MONTH_GOAL_TOTAL, getMonthGoalTotal);
+  yield takeLatest(actionTypes.POST_MONTH_GOAL, postMonthGoal);
 }
 
 export default monthSaga;
