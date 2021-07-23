@@ -14,7 +14,7 @@ import { transactionList } from 'redux/actions';
 
 const Transaction = (props) => {
   const dispatch = useDispatch();
-  useEffect(() => dispatch(transactionList()));
+  useEffect(() => dispatch(transactionList()), []);
 
   const transactions = props.transaction.transactionList.map((item, index) => {
     return (
