@@ -17,7 +17,7 @@ import { walletList } from 'redux/actions';
 
 const Wallet = (props) => {
   const dispatch = useDispatch();
-  useEffect(() => dispatch(walletList()));
+  useEffect(() => dispatch(walletList()), []);
 
   const wallets = props.wallet.walletList.map((item, index) => {
     return (
