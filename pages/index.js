@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Nav from 'components/Nav/Nav';
 import Wallet from 'components/Wallet/Wallet';
 import Transaction from 'components/Transaction/Transaction';
-import Refresher from 'components/refresher';
 
 /* To Do Items: 
 1. Nav
@@ -18,13 +17,13 @@ export default function Home() {
         <title>Budgetier</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Refresher />
       <div className="background1">
         <Nav />
         <div className="background2"></div>
         <div className="background3"></div>
         <div className="background4"></div>
         <Wallet />
+        <Transaction />
       </div>
     </div>
   );
