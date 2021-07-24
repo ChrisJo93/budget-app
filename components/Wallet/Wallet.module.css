@@ -1,4 +1,4 @@
-/* .wallet_container {
+.wallet_container {
   width: 20vw;
   height: 90vh;
   position: relative;
@@ -37,4 +37,4 @@
 
 .card_container:hover {
   background-color: blue;
-} */
+}
