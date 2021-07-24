@@ -13,7 +13,7 @@ const WalletList = (props) => {
     //     </div>
     //   </div>
     // </div>
-    <form>
+    <form className={styles.form_spacer}>
       <input type="radio" value={props.name} name="wallet" />
       <label className={styles.card_container}>{props.name}</label>
     </form>
