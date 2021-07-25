@@ -1,7 +1,9 @@
 import styles from './Wallet.module.css';
 
 const WalletList = (props) => {
-  const onChangeValue = (e) => {};
+  const onChangeValue = (e) => {
+    console.log(changeEvent.target.value);
+  };
 
   return (
     // <div className={styles.card_container}>
