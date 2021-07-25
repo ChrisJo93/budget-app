@@ -1,6 +1,8 @@
 import styles from './Wallet.module.css';
 
 const WalletList = (props) => {
+  const onChangeValue = (e) => {};
+
   return (
     // <div className={styles.card_container}>
 
@@ -14,7 +16,12 @@ const WalletList = (props) => {
     //   </div>
     // </div>
     <form className={styles.form_spacer}>
-      <input type="radio" value={props.name} name="wallet" />
+      <input
+        type="radio"
+        value={props.name}
+        name="wallet"
+        onChange={onChangeValue}
+      />
       <label className={styles.card_container}>{props.name}</label>
     </form>
   );
