@@ -12,7 +12,7 @@ import { walletList } from 'redux/actions';
 2. Style wallets to be a little smaller.
 3. Add radial selection for each wallet.
 4. Dynamically render wallet contents. 
-5. Spike if transactions should display which wallet they occured in
+5. Change walletList to radio component devoid of internal state.
  */
 
 const Wallet = (props) => {

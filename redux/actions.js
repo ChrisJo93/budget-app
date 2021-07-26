@@ -59,5 +59,3 @@ export function transactionList() {
 export function transactionByCategory(category) {
   return { type: actionTypes.GET_TRANSACTION_BY_CATEGORY, payload: category };
 }
-
-//working full time. Trying to balance work, school, and finding time for these commits.
