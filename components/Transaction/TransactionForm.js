@@ -1,13 +1,22 @@
-export default TransactionForm = (props) => {
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
+const TransactionForm = (props) => {
   //Transactions need item_name, amount, date(maybe), category_id, user-id
   //dispatch state to server
-  const state = {
+  const transactionState = {
     item_name: '',
     amount: '',
     date: '',
     category_id: '',
     user_id: '',
   };
+
+  //   const dispatch = useDispatch();
+
+  //   const postTransaction = () => {
+  //     dispatch(postTransaction(transactionState));
+  //   };
 
   const onChangeValue = (e) => {
     console.log(changeEvent.target.value);
@@ -24,3 +33,5 @@ export default TransactionForm = (props) => {
     </form>
   );
 };
+
+export default TransactionForm;

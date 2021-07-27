@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import styles from './Transaction.module.css';
 
 import TransactionList from './TransactionList';
+import TransactionForm from './TransactionForm';
 import { transactionList } from 'redux/actions';
 
 /* To Do:
@@ -14,7 +15,7 @@ import { transactionList } from 'redux/actions';
 
 const Transaction = (props) => {
   const dispatch = useDispatch();
-  useEffect(() => dispatch(transactionList()), []);
+  useEffect(() => dispatch(transactionList()), [TransactionList]);
 
   const transactions = props.transaction.transactionList.map((item, index) => {
     return (
@@ -30,7 +31,9 @@ const Transaction = (props) => {
   return (
     <div className={styles.transaction_container}>
       <h4>Transactions</h4>
+      <p>YoooooYoooooYoooooYoooooYoooooYoooooYooooo</p>
       {transactions}
+      <TransactionForm />
     </div>
   );
 };

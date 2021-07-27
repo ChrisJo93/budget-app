@@ -1,11 +1,10 @@
 .transaction_container {
-  width: 20vw;
+  /* width: 20vw;
   height: 90vh;
   position: relative;
   background: rgba(218, 161, 161, 0);
   border-radius: 3vw;
-  overflow: scroll;
-  margin: auto;
+  margin: auto; */
 }
 
 .transactions {
