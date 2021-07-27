@@ -31,7 +31,6 @@ const Transaction = (props) => {
   return (
     <div className={styles.transaction_container}>
       <h4>Transactions</h4>
-      <p>YoooooYoooooYoooooYoooooYoooooYoooooYooooo</p>
       {transactions}
       <TransactionForm />
     </div>

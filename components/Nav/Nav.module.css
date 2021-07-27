@@ -4,6 +4,7 @@
   background-color: #e6e9f1;
   width: 44vw;
   margin-left: 21vw;
+  position: absolute;
 }
 
 .nav_container div {
