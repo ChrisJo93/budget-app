@@ -2,8 +2,6 @@ import { connect } from 'react-redux';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import styles from './Transaction.module.css';
-
 import TransactionList from './TransactionList';
 import TransactionForm from './TransactionForm';
 import { transactionList } from 'redux/actions';
@@ -29,8 +27,8 @@ const Transaction = (props) => {
   });
 
   return (
-    <div className={styles.transaction_container}>
-      <h4>Transactions</h4>
+    <div className="bg-blue-500">
+      <h4 className="bg-blue-400">Transactions</h4>
       {transactions}
       <TransactionForm />
     </div>

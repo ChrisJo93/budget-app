@@ -2,8 +2,6 @@ import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
-import styles from './Wallet.module.css';
-
 import WalletList from './WalletList';
 import { walletList } from 'redux/actions';
 
@@ -21,11 +19,16 @@ const Wallet = (props) => {
 
   const wallets = props.wallet.walletList.map((item, index) => {
     return (
-      <WalletList key={index} name={item.wallet_name} amount={item.income} />
+      <WalletList
+        key={index}
+        name={item.wallet_name}
+        amount={item.income}
+        className="bg-gray-800"
+      />
     );
   });
 
-  return <div className={styles.wallet_container}>{wallets}</div>;
+  return <div className="bg-red-500">{wallets}</div>;
 };
 
 export default connect((state) => state)(Wallet);
