@@ -10,7 +10,7 @@ const Nav = (props) => {
   //later change
 
   return (
-    <header className={styles.nav_container}>
+    <header className="bg-red-700">
       <ul>
         <div>
           <li>
