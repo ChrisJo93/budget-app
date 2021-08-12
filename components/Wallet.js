@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
-import WalletList from './WalletList';
 import { walletList } from 'redux/actions';
 
 /* To Do:
@@ -14,21 +13,7 @@ import { walletList } from 'redux/actions';
  */
 
 const Wallet = (props) => {
-  const dispatch = useDispatch();
-  useEffect(() => dispatch(walletList()), []);
-
-  const wallets = props.wallet.walletList.map((item, index) => {
-    return (
-      <WalletList
-        key={index}
-        name={item.wallet_name}
-        amount={item.income}
-        className="bg-gray-800"
-      />
-    );
-  });
-
-  return <div className="bg-red-500">{wallets}</div>;
+  return null;
 };
 
 export default connect((state) => state)(Wallet);

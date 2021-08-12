@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Nav from 'components/Nav/Nav';
-import Wallet from 'components/Wallet/Wallet';
-import Transaction from 'components/Transaction/Transaction';
+import Nav from 'components/Nav';
+import Wallet from 'components/Wallet';
+import Transaction from 'components/Transaction';
 
 /* To Do Items: 
 1. Nav
@@ -17,16 +17,11 @@ export default function Home() {
         <title>Budgetier</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="background1">
-        <Nav />
-        <div className="background2"></div>
-        <div className="background3"></div>
-        <div className="background4"></div>
-        <div className="componentContainer">
-          <Wallet />
-          <Transaction />
-        </div>
-      </div>
+
+      <Nav />
+
+      <Wallet />
+      <Transaction />
     </div>
   );
 }
