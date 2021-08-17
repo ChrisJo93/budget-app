@@ -13,7 +13,11 @@ import { walletList } from 'redux/actions';
  */
 
 const Wallet = (props) => {
-  return null;
+  return (
+    <section className="bg-gray-600">
+      <div className="container mx-auto flex flex-row items-center">Poop</div>
+    </section>
+  );
 };
 
 export default connect((state) => state)(Wallet);

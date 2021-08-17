@@ -17,11 +17,12 @@ export default function Home() {
         <title>Budgetier</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <main className="text-gray-400">
+        <Nav />
 
-      <Nav />
-
-      <Wallet />
-      <Transaction />
+        <Wallet />
+        <Transaction />
+      </main>
     </div>
   );
 }
